@@ -48,6 +48,7 @@ export const Container = styled.header`
           }
         }
 
+        & + button,
         & + a {
           margin-left: 32px;
         }
@@ -83,7 +84,8 @@ export const Container = styled.header`
           }
         }
 
-        & + button {
+        & + button,
+        & + a {
           margin-left: 32px;
         }
       }

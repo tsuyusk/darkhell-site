@@ -1,8 +1,13 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { defaultTheme } from '@/styles/theme/default';
+interface RootProviderProps {
+  theme: DefaultTheme;
+}
 
-export const RootProvider: React.FC = ({ children }) => {
-  return <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>;
+export const RootProvider: React.FC<RootProviderProps> = ({
+  theme,
+  children,
+}) => {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };

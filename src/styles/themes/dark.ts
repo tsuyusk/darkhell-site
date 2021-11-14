@@ -1,11 +1,11 @@
-export const defaultTheme = {
-  background: '#F2EFF4',
-  dark_bg: '#0D0B0E',
+export const darkTheme = {
+  background: '#0D0B0E',
+  dark_bg: '#09060a',
   primary: '#7A209A',
-  text: '#161417',
-  text_2: '#19151D',
+  text: '#CFCBBC',
+  text_2: '#918e83',
   text_on_primary: '#FAF8EB',
-  white_text: '#FAF7ED',
+  white_text: '#CFCBBC',
   white_text_alt: '#CFCBBC',
   fonts: {
     roboto: 'Roboto',

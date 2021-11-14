@@ -1,6 +1,7 @@
 import React, { useCallback, useRef } from 'react';
-
+import { useTheme } from 'styled-components';
 import * as Icons from 'react-icons/fi';
+
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Content } from '@/components/Content';
@@ -8,7 +9,13 @@ import { Slider } from '@/components/Slider';
 import { SEO } from '@/components/SEO';
 import * as S from '@/styles/pages/index';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  handleSwitchTheme(): void;
+  themeName: string;
+}
+
+const Home: React.FC<HomeProps> = ({ themeName, handleSwitchTheme }) => {
+  const { white_text } = useTheme();
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);
 
@@ -43,6 +50,14 @@ const Home: React.FC = () => {
           <>
             <a href="#">Loja</a>
             <a href="#">Notícias</a>
+
+            <button onClick={handleSwitchTheme}>
+              {themeName === 'light' ? (
+                <Icons.FiMoon size={24} color={white_text} />
+              ) : (
+                <Icons.FiSun size={24} color={white_text} />
+              )}
+            </button>
           </>
         }
       />

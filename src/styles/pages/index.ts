@@ -5,6 +5,7 @@ const sectionTitle = css`
   font-weight: bold;
   font-size: 36px;
   line-height: 44px;
+  color: ${props => props.theme.text};
 
   > span {
     color: ${props => props.theme.primary};
@@ -89,6 +90,7 @@ export const WhoWeAre = styled.section`
   > h1 {
     position: relative;
     width: fit-content;
+    color: ${props => props.theme.text};
 
     margin: 72px auto;
     text-align: center;
@@ -134,6 +136,7 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
       height: 464px;
       width: 464px;
       border-radius: 4px;
+      box-shadow: 0 0 16px rgb(122, 32, 154);
     }
 
     > div {

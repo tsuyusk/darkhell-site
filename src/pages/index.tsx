@@ -107,7 +107,7 @@ const Home: React.FC<HomeProps> = ({ themeName, handleSwitchTheme }) => {
 
             <div>
               <h1>
-                O que é a <br /> <span>Dark Hell</span> ?
+                O que é a <span>Dark Hell</span> ?
               </h1>
 
               <p>

@@ -5,11 +5,13 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Content } from '@/components/Content';
 import { Slider } from '@/components/Slider';
+import { SEO } from '@/components/SEO';
 import * as S from '@/styles/pages/index';
 
 const Home: React.FC = () => {
   return (
     <S.Container>
+      <SEO title="Dark hell" shouldExcludeTitleSuffix /> 
       <Header />
 
       <S.Banner>

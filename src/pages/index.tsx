@@ -1,0 +1,319 @@
+import React from 'react';
+
+import * as Icons from 'react-icons/fi';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Content } from '@/components/Content';
+import { Slider } from '@/components/Slider';
+import * as S from '@/styles/pages/index';
+
+const Home: React.FC = () => {
+  return (
+    <S.Container>
+      <Header />
+
+      <S.Banner>
+        <Content>
+          <div>
+            <h1>Dark Hell</h1>
+            <strong>
+              O inferno está vazio, <br />
+              os demônios já estão fora.
+            </strong>
+
+            <nav>
+              <a href="#">
+                <img src="/icons/discord.png" alt="Discord" />
+                <span>Discord</span>
+                <Icons.FiArrowRightCircle size={16} />
+              </a>
+
+              <a href="#">
+                <img src="/icons/instagram.png" alt="Instagram" />
+                <span>Instagram</span>
+                <Icons.FiArrowRightCircle size={16} />
+              </a>
+
+              <a href="#">
+                <img src="/icons/youtube.png" alt="Youtube" />
+                <span>Youtube</span>
+                <Icons.FiArrowRightCircle size={16} />
+              </a>
+            </nav>
+          </div>
+        </Content>
+
+        <img src="/assets/DarkHellBg.png" alt="Background" />
+      </S.Banner>
+
+      <S.WhoWeAre>
+        <h1>Sobre nós</h1>
+
+        <S.ImageTextSection>
+          <Content>
+            <img src="/assets/dark_hell.jpg" alt="Dark Hell" />
+
+            <div>
+              <h1>
+                O que é a <br /> Dark Hell ?
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+          </Content>
+        </S.ImageTextSection>
+
+        <S.ImageTextSection reverseRow>
+          <Content>
+            <img src="/assets/person_hand.png" alt="Dark Hell" />
+
+            <div>
+              <h1>
+                Como você pode <br />
+                ser útil para nós ?
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+          </Content>
+        </S.ImageTextSection>
+
+        <S.TopDoubleTextSection>
+          <header>
+            <Content>
+              <h1>Como funciona a Dark Hell ?</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </Content>
+          </header>
+
+          <main>
+            <Slider>
+              <div>
+                <S.Card>
+                  <strong>Lorde</strong>
+                  <span>(Lider)</span>
+                </S.Card>
+
+                <Icons.FiChevronRight size={48} />
+
+                <S.Card>
+                  <strong>Leviatã</strong>
+                  <span>(Co-lider)</span>
+                </S.Card>
+
+                <Icons.FiChevronRight size={48} />
+
+                <S.Card>
+                  <strong>Potestade</strong>
+                  <span>(Decisões)</span>
+                </S.Card>
+
+                <Icons.FiChevronRight size={48} />
+
+                <S.Card>
+                  <strong>Cérbero</strong>
+                  <span>(Alto escalão)</span>
+                </S.Card>
+
+                <Icons.FiChevronRight size={48} />
+
+                <S.Card>
+                  <strong>Demônio</strong>
+                  <span>(Membro Oficial)</span>
+                </S.Card>
+
+                <Icons.FiChevronRight size={48} />
+
+                <S.Card>
+                  <strong>Pecador</strong>
+                  <span>(Novato)</span>
+                </S.Card>
+              </div>
+            </Slider>
+          </main>
+        </S.TopDoubleTextSection>
+
+        <S.TopDoubleTextSection>
+          <header>
+            <Content>
+              <h1>O que são os setores ?</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </Content>
+          </header>
+
+          <main>
+            <Slider slidedScrollLeftPerClick={220}>
+              <div>
+                <S.SectorCard>
+                  <h1>Setor Hacker</h1>
+                  <span>Administrado por Ric</span>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum
+                  </p>
+                </S.SectorCard>
+
+                <S.SectorCard>
+                  <h1>Setor Conteúdo</h1>
+                  <span>Administrado por Louis</span>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum
+                  </p>
+                </S.SectorCard>
+
+                <S.SectorCard>
+                  <h1>Setor Publicidade</h1>
+                  <span>Administrado por Said</span>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum
+                  </p>
+                </S.SectorCard>
+              </div>
+            </Slider>
+          </main>
+        </S.TopDoubleTextSection>
+
+        <S.DoubleTextColumnsSection>
+          <Content>
+            <div>
+              <h1>
+                E quais são <br /> as regras?
+              </h1>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut
+                aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                voluptas nulla pariatur?
+              </p>
+            </div>
+
+            <div>
+              <h1>
+                O que é uma <br />
+                advertência ?
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+          </Content>
+        </S.DoubleTextColumnsSection>
+
+        <S.SingleTextColumnCardsRight>
+          <Content>
+            <div>
+              <h1>
+                Como posso <br />
+                entrar ?
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </p>
+            </div>
+
+            <div>
+              <S.WayOfenteringCard>
+                <h1>Indicação</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </S.WayOfenteringCard>
+
+              <S.WayOfenteringCard>
+                <h1>Candidatar-se</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </S.WayOfenteringCard>
+            </div>
+          </Content>
+        </S.SingleTextColumnCardsRight>
+      </S.WhoWeAre>
+
+      <Footer />
+    </S.Container>
+  );
+};
+
+export default Home;

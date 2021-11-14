@@ -66,28 +66,19 @@ const Home: React.FC<HomeProps> = ({ themeName, handleSwitchTheme }) => {
         <Content>
           <div>
             <h1>Dark Hell</h1>
-            <strong>
-              O inferno está vazio, <br />
-              os demônios já estão fora.
-            </strong>
+            <strong>O inferno está vazio, os demônios já estão fora.</strong>
 
             <nav>
               <a href="#">
                 <img src="/icons/discord.png" alt="Discord" />
-                <span>Discord</span>
-                <Icons.FiArrowRightCircle size={16} />
               </a>
 
               <a href="#">
                 <img src="/icons/instagram.png" alt="Instagram" />
-                <span>Instagram</span>
-                <Icons.FiArrowRightCircle size={16} />
               </a>
 
               <a href="#">
                 <img src="/icons/youtube.png" alt="Youtube" />
-                <span>Youtube</span>
-                <Icons.FiArrowRightCircle size={16} />
               </a>
             </nav>
           </div>

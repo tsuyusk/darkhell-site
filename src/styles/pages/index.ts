@@ -28,26 +28,36 @@ export const Banner = styled.section`
   height: 457px;
 
   > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       color: ${props => props.theme.white_text};
       padding: 76px 0;
 
       > h1 {
-        font-size: 6.4rem;
-        line-height: 7.7rem;
+        font-size: 7.2rem;
+        line-height: 8.7rem;
         font-family: ${props => props.theme.fonts.inter};
-        margin-bottom: 24px;
         text-shadow: 0 0 16px rgb(122, 32, 154);
       }
 
       > strong {
+        color: ${props => props.theme.white_text_alt};
         font-weight: 500;
         font-size: 2.4rem;
         line-height: 2.8rem;
+
+        margin: 50px 0 75px;
       }
 
       > nav {
-        margin-top: 36px;
+        display: flex;
 
         > a {
           display: flex;
@@ -55,16 +65,21 @@ export const Banner = styled.section`
           color: ${props => props.theme.white_text};
           transition: ease 0.3s;
 
+          > img {
+            width: 40px;
+            height: 40px;
+          }
+
           > span {
             margin: 0 12px;
           }
 
-          &:hover {
-            transform: translateX(12px);
+          & + a {
+            margin-left: 24px;
           }
 
-          & + a {
-            margin-top: 18px;
+          &:hover {
+            transform: translateY(-10px);
           }
         }
       }

@@ -13,7 +13,10 @@ export const Global = createGlobalStyle`
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
+  }
 
+  html {
+    font-size: 62.5%;
   }
 
   body {
@@ -24,7 +27,7 @@ export const Global = createGlobalStyle`
   body,
   textarea,
   button {
-    font-size: 16px;
+    font-size: 1.6rem;
     color: ${props => props.theme.text};
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
   }

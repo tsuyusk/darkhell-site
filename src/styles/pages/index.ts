@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components';
 const sectionTitle = css`
   font-family: ${props => props.theme.fonts.inter};
   font-weight: bold;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 3.6rem;
+  line-height: 4.4rem;
   color: ${props => props.theme.text};
 
   > span {
@@ -13,8 +13,8 @@ const sectionTitle = css`
 `;
 
 const sectionText = css`
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
   width: 502px;
   color: ${props => props.theme.text_2};
 `;
@@ -33,8 +33,8 @@ export const Banner = styled.section`
       padding: 76px 0;
 
       > h1 {
-        font-size: 64px;
-        line-height: 77px;
+        font-size: 6.4rem;
+        line-height: 7.7rem;
         font-family: ${props => props.theme.fonts.inter};
         margin-bottom: 24px;
         text-shadow: 0 0 16px rgb(122, 32, 154);
@@ -42,8 +42,8 @@ export const Banner = styled.section`
 
       > strong {
         font-weight: 500;
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
       }
 
       > nav {
@@ -97,8 +97,8 @@ export const WhoWeAre = styled.section`
 
     font-family: ${props => props.theme.fonts.inter};
     font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
 
     > span {
       color: ${props => props.theme.primary};
@@ -220,7 +220,7 @@ export const Card = styled.div`
   box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
 
   > strong {
-    font-size: 24px;
+    font-size: 2.4rem;
 
     font-family: ${props => props.theme.fonts.inter};
     font-weight: 700;
@@ -228,7 +228,7 @@ export const Card = styled.div`
   }
 
   > span {
-    font-size: 18px;
+    font-size: 1.8rem;
 
     font-weight: 500;
     color: ${props => props.theme.white_text_alt};
@@ -252,6 +252,7 @@ export const SectorCard = styled.div`
 
   > h1 {
     font-family: ${props => props.theme.fonts.inter};
+    font-size: 2.4rem;
 
     > span {
       color: ${props => props.theme.primary};
@@ -266,7 +267,7 @@ export const SectorCard = styled.div`
   > p {
     color: ${props => props.theme.white_text_alt};
     margin-top: 38px;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 147.02%;
   }
 
@@ -343,14 +344,14 @@ export const WayOfenteringCard = styled.button`
     color: ${props => props.theme.white_text};
     font-family: ${props => props.theme.fonts.inter};
     font-weight: 500;
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
   }
 
   > p {
     color: ${props => props.theme.white_text_alt};
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     margin-top: 18px;
   }
 

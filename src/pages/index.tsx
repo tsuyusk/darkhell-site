@@ -183,7 +183,7 @@ const Home: React.FC<HomeProps> = ({ themeName, handleSwitchTheme }) => {
 
                 <S.Card>
                   <strong>Potestade</strong>
-                  <span>(Decisões)</span>
+                  <span>(Assembléia)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />

@@ -12,10 +12,8 @@ export const Global = createGlobalStyle`
   #__next {
     height: 100%;
     width: 100%;
-  }
-
-  html {
     scroll-behavior: smooth;
+
   }
 
   body {
@@ -24,7 +22,9 @@ export const Global = createGlobalStyle`
 
   input,
   body,
-  textarea {
+  textarea,
+  button {
+    font-size: 16px;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
   }
 

@@ -3,21 +3,20 @@ import React from 'react';
 import { Content } from '@/components/Content';
 import * as S from '@/styles/components/Header';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  leftLinks?: React.ReactNode;
+  rightLinks?: React.ReactNode;
+}
+
+export const Header: React.FC<HeaderProps> = ({ leftLinks, rightLinks }) => {
   return (
     <S.Container>
       <Content>
-        <div>
-          <a href="#">Início</a>
-          <a href="#">Sobre Nós</a>
-        </div>
+        <div>{leftLinks}</div>
 
         <img src="/logo.jpg" alt="Dark Hell" />
 
-        <div>
-          <a href="#">Loja</a>
-          <a href="#">Notícias</a>
-        </div>
+        <div>{rightLinks}</div>
       </Content>
     </S.Container>
   );

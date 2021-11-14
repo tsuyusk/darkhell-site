@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import * as Icons from 'react-icons/fi';
 import { Header } from '@/components/Header';
@@ -9,12 +9,45 @@ import { SEO } from '@/components/SEO';
 import * as S from '@/styles/pages/index';
 
 const Home: React.FC = () => {
+  const bannerRef = useRef<HTMLElement>(null);
+  const aboutUsRef = useRef<HTMLElement>(null);
+
+  const goTo = useCallback((sectionName: string) => {
+    const handlers = {
+      LandingPageTop: () => {
+        window.scrollTo({
+          top: bannerRef.current?.offsetTop,
+        });
+      },
+      AboutUs: () => {
+        window.scrollTo({
+          top: aboutUsRef.current?.offsetTop,
+        });
+      },
+    };
+
+    return handlers[sectionName] || function () {};
+  }, []);
+
   return (
     <S.Container>
-      <SEO title="Dark hell" shouldExcludeTitleSuffix /> 
-      <Header />
+      <SEO title="Dark hell" shouldExcludeTitleSuffix />
+      <Header
+        leftLinks={
+          <>
+            <button onClick={goTo('Banner')}>Início</button>
+            <button onClick={goTo('AboutUs')}>Sobre Nós</button>
+          </>
+        }
+        rightLinks={
+          <>
+            <a href="#">Loja</a>
+            <a href="#">Notícias</a>
+          </>
+        }
+      />
 
-      <S.Banner>
+      <S.Banner ref={bannerRef}>
         <Content>
           <div>
             <h1>Dark Hell</h1>
@@ -48,8 +81,10 @@ const Home: React.FC = () => {
         <img src="/assets/DarkHellBg.png" alt="Background" />
       </S.Banner>
 
-      <S.WhoWeAre>
-        <h1>Sobre nós</h1>
+      <S.WhoWeAre ref={aboutUsRef}>
+        <h1>
+          Sobre <span>nós</span>
+        </h1>
 
         <S.ImageTextSection>
           <Content>
@@ -57,7 +92,7 @@ const Home: React.FC = () => {
 
             <div>
               <h1>
-                O que é a <br /> Dark Hell ?
+                O que é a <br /> <span>Dark Hell</span> ?
               </h1>
 
               <p>
@@ -79,8 +114,8 @@ const Home: React.FC = () => {
 
             <div>
               <h1>
-                Como você pode <br />
-                ser útil para nós ?
+                Como <span>você</span> pode <br />
+                ser <span>útil</span> para <span>nós</span> ?
               </h1>
 
               <p>
@@ -99,7 +134,9 @@ const Home: React.FC = () => {
         <S.TopDoubleTextSection>
           <header>
             <Content>
-              <h1>Como funciona a Dark Hell ?</h1>
+              <h1>
+                Como funciona a <span>Dark Hell</span> ?
+              </h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -162,7 +199,9 @@ const Home: React.FC = () => {
         <S.TopDoubleTextSection>
           <header>
             <Content>
-              <h1>O que são os setores ?</h1>
+              <h1>
+                O que são os <span>setores</span> ?
+              </h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -179,7 +218,9 @@ const Home: React.FC = () => {
             <Slider slidedScrollLeftPerClick={220}>
               <div>
                 <S.SectorCard>
-                  <h1>Setor Hacker</h1>
+                  <h1>
+                    Setor <span>Hacker</span>
+                  </h1>
                   <span>Administrado por Ric</span>
 
                   <p>
@@ -195,7 +236,9 @@ const Home: React.FC = () => {
                 </S.SectorCard>
 
                 <S.SectorCard>
-                  <h1>Setor Conteúdo</h1>
+                  <h1>
+                    Setor <span>Conteúdo</span>
+                  </h1>
                   <span>Administrado por Louis</span>
 
                   <p>
@@ -211,7 +254,9 @@ const Home: React.FC = () => {
                 </S.SectorCard>
 
                 <S.SectorCard>
-                  <h1>Setor Publicidade</h1>
+                  <h1>
+                    Setor <span>Publicidade</span>
+                  </h1>
                   <span>Administrado por Said</span>
 
                   <p>
@@ -234,7 +279,7 @@ const Home: React.FC = () => {
           <Content>
             <div>
               <h1>
-                E quais são <br /> as regras?
+                E quais são <br /> as <span>regras</span>?
               </h1>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -258,7 +303,7 @@ const Home: React.FC = () => {
             <div>
               <h1>
                 O que é uma <br />
-                advertência ?
+                <span>advertência</span> ?
               </h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -278,7 +323,7 @@ const Home: React.FC = () => {
             <div>
               <h1>
                 Como posso <br />
-                entrar ?
+                entrar na <span>Dark Hell</span> ?
               </h1>
 
               <p>

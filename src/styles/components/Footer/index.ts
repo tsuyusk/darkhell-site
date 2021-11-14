@@ -48,6 +48,7 @@ export const Container = styled.footer`
         height: 56px;
         border-radius: 50%;
         pointer-events: none;
+        box-shadow: 0 0 16px rgb(122, 32, 154);
       }
     }
     > div {
@@ -59,6 +60,16 @@ export const Container = styled.footer`
         margin: 56px 0 36px;
 
         > a {
+          > img {
+            transition: 0.3s ease;
+          }
+
+          &:hover {
+            > img {
+              transform: translateY(-16px);
+            }
+          }
+
           & + a {
             margin-left: 19px;
           }

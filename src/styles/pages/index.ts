@@ -5,6 +5,10 @@ const sectionTitle = css`
   font-weight: bold;
   font-size: 36px;
   line-height: 44px;
+
+  > span {
+    color: ${props => props.theme.primary};
+  }
 `;
 
 const sectionText = css`
@@ -32,6 +36,7 @@ export const Banner = styled.section`
         line-height: 77px;
         font-family: ${props => props.theme.fonts.inter};
         margin-bottom: 24px;
+        text-shadow: 0 0 16px rgb(122, 32, 154);
       }
 
       > strong {
@@ -93,6 +98,10 @@ export const WhoWeAre = styled.section`
     font-size: 36px;
     line-height: 44px;
 
+    > span {
+      color: ${props => props.theme.primary};
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -142,6 +151,7 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
 
       > p {
         ${sectionText};
+        margin-top: 51px;
       }
     }
   }
@@ -239,6 +249,11 @@ export const SectorCard = styled.div`
 
   > h1 {
     font-family: ${props => props.theme.fonts.inter};
+
+    > span {
+      color: ${props => props.theme.primary};
+      text-shadow: 0 0 16px rgba(122, 32, 154, 0.38);
+    }
   }
 
   > span {

@@ -1,5 +1,5 @@
 export const darkTheme = {
-  background: '#0D0B0E',
+  background: '#141217',
   dark_bg: '#09060a',
   primary: '#7A209A',
   text: '#CFCBBC',
@@ -7,6 +7,7 @@ export const darkTheme = {
   text_on_primary: '#FAF8EB',
   white_text: '#CFCBBC',
   white_text_alt: '#918e83',
+  strong_white: '#fff',
   fonts: {
     roboto: 'Roboto',
     inter: 'Inter',

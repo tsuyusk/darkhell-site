@@ -10,6 +10,7 @@ declare module 'styled-components' {
     text_on_primary: string;
     white_text: string;
     white_text_alt: string;
+    strong_white: string;
 
     fonts: {
       roboto: string;

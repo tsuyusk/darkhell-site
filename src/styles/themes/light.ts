@@ -7,6 +7,7 @@ export const lightTheme = {
   text_on_primary: '#FAF8EB',
   white_text: '#FAF7ED',
   white_text_alt: '#CFCBBC',
+  strong_white: '#fff',
   fonts: {
     roboto: 'Roboto',
     inter: 'Inter',

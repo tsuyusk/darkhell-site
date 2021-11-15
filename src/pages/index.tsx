@@ -63,7 +63,9 @@ const Home: React.FC = () => {
         <Content>
           <div>
             <h1>Dark Hell</h1>
-            <strong>O inferno está vazio, os demônios já estão fora.</strong>
+            <strong>
+              O inferno está vazio, <br /> os demônios já estão fora.
+            </strong>
 
             <nav>
               <a href="#">

@@ -8,6 +8,7 @@ const sectionTitle = css`
   color: ${props => props.theme.text};
 
   > span {
+    text-shadow: 0 0 4px rgba(122, 32, 154, 0.6);
     color: ${props => props.theme.primary};
   }
 `;
@@ -29,20 +30,18 @@ export const Banner = styled.section`
 
   > div {
     display: flex;
-    align-items: center;
-    justify-content: center;
 
     > div {
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       color: ${props => props.theme.white_text};
       padding: 76px 0;
 
       > h1 {
-        font-size: 7.2rem;
-        line-height: 8.7rem;
+        font-size: 6.4rem;
+        line-height: 7.7rem;
+        color: ${props => props.theme.strong_white};
         font-family: ${props => props.theme.fonts.inter};
         text-shadow: 0 0 16px rgb(122, 32, 154);
       }
@@ -50,8 +49,8 @@ export const Banner = styled.section`
       > strong {
         color: ${props => props.theme.white_text_alt};
         font-weight: 500;
-        font-size: 2.4rem;
-        line-height: 2.8rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
 
         margin: 50px 0 75px;
       }
@@ -66,8 +65,8 @@ export const Banner = styled.section`
           transition: ease 0.3s;
 
           > img {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
           }
 
           > span {
@@ -116,6 +115,7 @@ export const WhoWeAre = styled.section`
     line-height: 4.4rem;
 
     > span {
+      text-shadow: 0 0 4px rgba(122, 32, 154, 0.6);
       color: ${props => props.theme.primary};
     }
 

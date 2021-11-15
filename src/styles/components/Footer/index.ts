@@ -61,6 +61,8 @@ export const Container = styled.footer`
 
         > a {
           > img {
+            width: 42px;
+            height: 42px;
             transition: 0.3s ease;
           }
 

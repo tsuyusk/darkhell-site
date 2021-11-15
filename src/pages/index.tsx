@@ -7,14 +7,11 @@ import { Footer } from '@/components/Footer';
 import { Content } from '@/components/Content';
 import { Slider } from '@/components/Slider';
 import { SEO } from '@/components/SEO';
+import { useCustomThemeProvider } from '@/hooks/theme';
 import * as S from '@/styles/pages/index';
 
-interface HomeProps {
-  handleSwitchTheme(): void;
-  themeName: string;
-}
-
-const Home: React.FC<HomeProps> = ({ themeName, handleSwitchTheme }) => {
+const Home: React.FC = () => {
+  const { handleSwitchTheme, themeName } = useCustomThemeProvider();
   const { white_text } = useTheme();
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);

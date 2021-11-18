@@ -7,6 +7,7 @@ export const Container = styled.footer`
   margin-top: 156px;
   background: ${props => props.theme.dark_bg};
   height: 80vh;
+  width: 100%;
 
   > div {
     > nav {
@@ -80,6 +81,27 @@ export const Container = styled.footer`
 
       > p {
         color: ${props => props.theme.white_text_alt};
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    > div {
+      > nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > a {
+          & + a {
+            margin-top: 12px;
+            margin-left: 0;
+          }
+        }
+        > * + * {
+          margin-top: 12px;
+          margin-left: 0;
+        }
       }
     }
   }

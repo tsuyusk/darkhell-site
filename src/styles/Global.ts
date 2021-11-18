@@ -10,7 +10,7 @@ export const Global = createGlobalStyle`
   html,
   body,
   #__next {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     scroll-behavior: smooth;
   }

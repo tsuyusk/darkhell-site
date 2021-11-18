@@ -11,22 +11,38 @@ const sectionTitle = css`
     text-shadow: 0 0 4px rgba(122, 32, 154, 0.6);
     color: ${props => props.theme.primary};
   }
+
+  @media (max-width: 923px) {
+    text-align: center;
+  }
 `;
 
 const sectionText = css`
   font-size: 1.8rem;
   line-height: 2.6rem;
-  width: 502px;
+  max-width: 502px;
   color: ${props => props.theme.text_2};
+
+  @media (max-width: 923px) {
+    text-align: center;
+  }
+
+  @media (max-width: 512px) {
+    max-width: 300px;
+  }
 `;
 
-export const Container = styled.main``;
+export const Container = styled.main`
+  width: 100%;
+  min-height: 100%;
+`;
 
 export const Banner = styled.section`
   position: relative;
 
   width: 100%;
-  height: 457px;
+  height: 90vh;
+  padding-top: 80px;
 
   > div {
     display: flex;
@@ -96,6 +112,10 @@ export const Banner = styled.section`
 
     z-index: -1;
   }
+
+  @media (max-width: 332px) {
+    height: 95vh;
+  }
 `;
 
 export const WhoWeAre = styled.section`
@@ -140,6 +160,9 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
   width: 100%;
 
   > div {
+    display: flex;
+    justify-content: space-between;
+
     ${props =>
       props.reverseRow &&
       css`
@@ -155,8 +178,6 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
     }
 
     > div {
-      margin-left: 154px;
-
       ${props =>
         props.reverseRow &&
         css`
@@ -177,12 +198,46 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
   & + article {
     margin-top: 96px;
   }
+
+  @media (max-width: 1181px) {
+    > div {
+      > img {
+        width: 360px;
+        height: 360px;
+      }
+    }
+  }
+
+  @media (max-width: 923px) {
+    > div {
+      flex-direction: column;
+
+      > div {
+        margin-top: 64px;
+
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 370px) {
+    > div {
+      flex-direction: column;
+
+      > img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
 `;
 
 export const TopDoubleTextSection = styled.article`
   width: 100%;
 
   > header {
+    width: 100%;
+
     > div {
       display: flex;
       justify-content: space-between;
@@ -217,6 +272,18 @@ export const TopDoubleTextSection = styled.article`
 
   & + article {
     margin-top: 96px;
+  }
+
+  @media (max-width: 923px) {
+    > header {
+      > div {
+        margin-bottom: 32px;
+
+        > p {
+          margin-top: 64px;
+        }
+      }
+    }
   }
 `;
 
@@ -302,7 +369,7 @@ export const DoubleTextColumnsSection = styled.article`
     > div {
       display: flex;
       flex-direction: column;
-      width: 502px;
+      max-width: 502px;
 
       > h1 {
         ${sectionTitle}
@@ -318,10 +385,27 @@ export const DoubleTextColumnsSection = styled.article`
   & + article {
     margin-top: 96px;
   }
+
+  @media (max-width: 923px) {
+    > div {
+      > div {
+        align-items: center;
+
+        &:last-child {
+          margin-top: 64px;
+        }
+      }
+    }
+  }
 `;
 
 export const SingleTextColumnCardsRight = styled.article`
+  width: 100%;
+
   > div {
+    display: flex;
+    justify-content: space-between;
+
     > div {
       > h1 {
         ${sectionTitle}
@@ -332,8 +416,8 @@ export const SingleTextColumnCardsRight = styled.article`
         ${sectionText}
       }
 
-      &:nth-child(2) {
-        margin-left: 42px;
+      &:last-child {
+        width: 40%;
       }
     }
   }
@@ -341,14 +425,23 @@ export const SingleTextColumnCardsRight = styled.article`
   & + article {
     margin-top: 96px;
   }
+
+  @media (max-width: 923px) {
+    > div {
+      > div:last-child {
+        margin-top: 64px;
+        width: 80%;
+      }
+    }
+  }
 `;
 
 export const WayOfenteringCard = styled.button`
   padding: 16px 12px;
   background: ${props => props.theme.dark_bg};
   border-radius: 4px;
-  height: 137px;
-  width: 100%;
+  min-height: 137px;
+  width: 90%;
   text-align: left;
 
   border: 0;
@@ -376,5 +469,9 @@ export const WayOfenteringCard = styled.button`
 
   & + button {
     margin-top: 59px;
+  }
+
+  @media (max-width: 923px) {
+    width: 100%;
   }
 `;

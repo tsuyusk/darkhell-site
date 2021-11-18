@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
         <div>
           <nav>
             <a href="#">
-              <img src="/icons/youtube.png" alt="Youtube" />
+              <img src="/icons/discord.png" alt="Discord" />
             </a>
 
             <a href="#">
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
             </a>
 
             <a href="#">
-              <img src="/icons/discord.png" alt="Discord" />
+              <img src="/icons/youtube.png" alt="Youtube" />
             </a>
           </nav>
 

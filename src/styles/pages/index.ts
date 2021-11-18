@@ -13,7 +13,7 @@ const sectionTitle = css`
   }
 
   @media (max-width: 923px) {
-    text-align: center;
+    text-align: left;
   }
 `;
 
@@ -24,7 +24,7 @@ const sectionText = css`
   color: ${props => props.theme.text_2};
 
   @media (max-width: 923px) {
-    text-align: center;
+    text-align: left;
   }
 
   @media (max-width: 512px) {
@@ -43,6 +43,7 @@ export const Banner = styled.section`
   width: 100%;
   height: 90vh;
   padding-top: 80px;
+  overflow-x: hidden;
 
   > div {
     display: flex;
@@ -83,6 +84,7 @@ export const Banner = styled.section`
           > img {
             width: 32px;
             height: 32px;
+            border-radius: 8px;
           }
 
           > span {
@@ -109,7 +111,9 @@ export const Banner = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 
+    filter: brightness(74%);
     z-index: -1;
   }
 
@@ -326,8 +330,8 @@ export const SectorCard = styled.div`
 
   color: ${props => props.theme.white_text};
   background: ${props => props.theme.dark_bg};
-  width: 864px;
-  height: 322px;
+  width: 64vw;
+  min-height: 168px;
   border-radius: 4px;
 
   box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
@@ -348,13 +352,17 @@ export const SectorCard = styled.div`
 
   > p {
     color: ${props => props.theme.white_text_alt};
-    margin-top: 38px;
+    margin-top: 12px;
     font-size: 1.6rem;
     line-height: 147.02%;
   }
 
   & + div {
     margin-left: 72px;
+  }
+
+  @media (max-width: 490px) {
+    width: 80vw;
   }
 `;
 

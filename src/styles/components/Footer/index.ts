@@ -62,8 +62,9 @@ export const Container = styled.footer`
 
         > a {
           > img {
-            width: 42px;
-            height: 42px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
             transition: 0.3s ease;
           }
 
@@ -91,6 +92,10 @@ export const Container = styled.footer`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        > img {
+          display: none;
+        }
 
         > a {
           & + a {

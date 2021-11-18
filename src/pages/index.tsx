@@ -83,7 +83,7 @@ const Home: React.FC = () => {
           </div>
         </Content>
 
-        <img src="/assets/DarkHellBg.png" alt="Background" />
+        <img src="/assets/DarkHellBg.jpg" alt="Background" />
       </S.Banner>
 
       <S.WhoWeAre ref={aboutUsRef}>
@@ -220,7 +220,7 @@ const Home: React.FC = () => {
           </header>
 
           <main>
-            <Slider slidedScrollLeftPerClick={220}>
+            <Slider>
               <div>
                 <S.SectorCard>
                   <h1>
@@ -302,22 +302,6 @@ const Home: React.FC = () => {
                 reprehenderit qui in ea voluptate velit esse quam nihil
                 molestiae consequatur, vel illum qui dolorem eum fugiat quo
                 voluptas nulla pariatur?
-              </p>
-            </div>
-
-            <div>
-              <h1>
-                O que é uma <br />
-                <span>advertência</span> ?
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
               </p>
             </div>
           </Content>

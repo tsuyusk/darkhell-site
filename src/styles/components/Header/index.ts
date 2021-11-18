@@ -125,14 +125,15 @@ export const Container = styled.header<ContainerProps>`
         width: 60%;
         background: ${props => props.theme.dark_bg};
         z-index: 99;
-        padding: 44px 0;
+        padding: 44px 24px;
 
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
+        align-items: flex-start;
 
         > img {
-          margin: 16px 0;
+          display: none;
         }
 
         > div {
@@ -141,10 +142,13 @@ export const Container = styled.header<ContainerProps>`
 
           > button,
           > a {
-            & + button,
-            & + a {
+            text-align: left;
+            margin-top: 16px;
+            margin-left: 0;
+
+            & + a,
+            & + button {
               margin-left: 0;
-              margin-top: 16px;
             }
           }
         }

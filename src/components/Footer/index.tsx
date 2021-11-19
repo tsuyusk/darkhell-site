@@ -18,15 +18,15 @@ export const Footer: React.FC = () => {
 
         <div>
           <nav>
-            <a href="#">
+            <a href="https://discord.gg/QSNheHwEhE" target="_blank">
               <img src="/icons/discord.png" alt="Discord" />
             </a>
 
-            <a href="#">
+            <a href="https://instagram.com/dark.hell.ofc" target="_blank">
               <img src="/icons/instagram.png" alt="Instagram" />
             </a>
 
-            <a href="#">
+            <a href="https://youtube.com/c/darkhell13" target="_blank">
               <img src="/icons/youtube.png" alt="Youtube" />
             </a>
           </nav>

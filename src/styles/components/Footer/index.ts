@@ -6,7 +6,7 @@ export const Container = styled.footer`
   justify-content: center;
   margin-top: 156px;
   background: ${props => props.theme.dark_bg};
-  height: 80vh;
+  height: 60vh;
   width: 100%;
 
   > div {

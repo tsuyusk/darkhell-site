@@ -68,22 +68,29 @@ const Home: React.FC = () => {
             </strong>
 
             <nav>
-              <a href="#">
+              <a href="https://discord.gg/QSNheHwEhE" target="_blank">
                 <img src="/icons/discord.png" alt="Discord" />
               </a>
 
-              <a href="#">
+              <a href="https://instagram.com/dark.hell.ofc" target="_blank">
                 <img src="/icons/instagram.png" alt="Instagram" />
               </a>
 
-              <a href="#">
+              <a href="https://youtube.com/c/darkhell13" target="_blank">
                 <img src="/icons/youtube.png" alt="Youtube" />
               </a>
             </nav>
           </div>
         </Content>
 
-        <img src="/assets/DarkHellBg.jpg" alt="Background" />
+        <video
+          src="/assets/BannerBg.mp4"
+          autoPlay
+          muted
+          playsInline
+          controls={false}
+          loop
+        />
       </S.Banner>
 
       <S.WhoWeAre ref={aboutUsRef}>

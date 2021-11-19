@@ -103,7 +103,7 @@ export const Banner = styled.section`
     }
   }
 
-  > img {
+  > video {
     position: absolute;
     top: 0;
     left: 0;

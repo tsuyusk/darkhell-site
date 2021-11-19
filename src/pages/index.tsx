@@ -68,15 +68,27 @@ const Home: React.FC = () => {
             </strong>
 
             <nav>
-              <a href="https://discord.gg/QSNheHwEhE" target="_blank">
+              <a
+                href="https://discord.gg/QSNheHwEhE"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src="/icons/discord.png" alt="Discord" />
               </a>
 
-              <a href="https://instagram.com/dark.hell.ofc" target="_blank">
+              <a
+                href="https://instagram.com/dark.hell.ofc"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src="/icons/instagram.png" alt="Instagram" />
               </a>
 
-              <a href="https://youtube.com/c/darkhell13" target="_blank">
+              <a
+                href="https://youtube.com/c/darkhell13"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src="/icons/youtube.png" alt="Youtube" />
               </a>
             </nav>

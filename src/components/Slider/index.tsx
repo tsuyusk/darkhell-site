@@ -17,13 +17,13 @@ export const Slider: React.FC<SliderProps> = ({
     if (!itemsDiv.current) return;
 
     itemsDiv.current.scrollLeft -= slidedScrollLeftPerClick;
-  }, []);
+  }, [slidedScrollLeftPerClick]);
 
   const handleScrollRight = useCallback(() => {
     if (!itemsDiv.current) return;
 
     itemsDiv.current.scrollLeft += slidedScrollLeftPerClick;
-  }, []);
+  }, [slidedScrollLeftPerClick]);
 
   return (
     <S.Container>

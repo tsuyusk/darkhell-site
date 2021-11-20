@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useMemo, useRef } from 'react';
 import { useTheme } from 'styled-components';
 import * as Icons from 'react-icons/fi';
 
@@ -15,6 +15,9 @@ const Home: React.FC = () => {
   const { white_text } = useTheme();
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);
+  const vwUnityInPx = useMemo(() => {
+    return window.innerWidth / 100;
+  }, []);
 
   const goTo = useCallback((sectionName: string) => {
     const handlers = {
@@ -186,7 +189,7 @@ const Home: React.FC = () => {
           </header>
 
           <main>
-            <Slider>
+            <Slider slidedScrollLeftPerClick={195 + 21 + 21 + 48}>
               <div>
                 <S.Card>
                   <strong>Lord 𖤍</strong>
@@ -248,7 +251,13 @@ const Home: React.FC = () => {
           </header>
 
           <main>
-            <Slider>
+            <Slider
+              slidedScrollLeftPerClick={
+                window.innerWidth <= 490
+                  ? vwUnityInPx * 80 + 72 + 42
+                  : vwUnityInPx * 64 + 72 + 72
+              }
+            >
               <div>
                 <S.SectorCard>
                   <h1 aria-labelledby="Setor Hacker">
@@ -307,19 +316,25 @@ const Home: React.FC = () => {
 
                 <S.SectorCard>
                   <h1>
-                    Setor <span>Publicidade</span>
+                    Sєтσя ∂є <span>Publicidade</span>
                   </h1>
-                  <span>Administrado por Said</span>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Velit voluptatum eius tempore illo possimus ut hic culpa
+                    maiores veniam est ipsum deserunt, quo corporis molestias,
+                    rerum eaque vel nesciunt dolores! Lorem ipsum dolor, sit
+                    amet consectetur adipisicing elit. Ipsa ullam, maiores
+                    consequatur excepturi odio quisquam repudiandae voluptas
+                    atque dolore. Corrupti nostrum voluptas hic repellendus
+                    fugit iusto odit quaerat magnam temporibus. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Quia,
+                    repellendus! Blanditiis voluptatibus veritatis officiis
+                    harum fuga, ab quas neque laudantium magni pariatur vel
+                    assumenda eveniet, error nostrum eos minus exercitationem?
+                    <br />
+                    ℒ Líderes
+                    <br />♛ Líder: Said
                   </p>
                 </S.SectorCard>
               </div>

@@ -334,7 +334,7 @@ export const SectorCard = styled.div`
   color: ${props => props.theme.white_text};
   background: ${props => props.theme.dark_bg};
   width: 64vw;
-  min-height: 168px;
+  min-height: 468px;
   border-radius: 4px;
 
   box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);

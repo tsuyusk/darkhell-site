@@ -162,9 +162,12 @@ interface ImageTextSectionProps {
 
 export const ImageTextSection = styled.article<ImageTextSectionProps>`
   width: 100%;
+  display: flex;
+  align-items: center;
 
   > div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     ${props =>
@@ -366,7 +369,7 @@ export const SectorCard = styled.div`
   }
 `;
 
-export const DoubleTextColumnsSection = styled.article`
+export const TextLiListSection = styled.article`
   display: flex;
   width: 100%;
 
@@ -377,15 +380,29 @@ export const DoubleTextColumnsSection = styled.article`
     > div {
       display: flex;
       flex-direction: column;
-      max-width: 502px;
+      width: 100%;
 
       > h1 {
         ${sectionTitle}
       }
 
       > p {
-        margin-top: 51px;
-        ${sectionText}
+        ${sectionText};
+        margin-top: 24px;
+      }
+
+      > ul {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 48px;
+        gap: 32px;
+
+        width: 100%;
+
+        > li {
+          ${sectionText};
+        }
       }
     }
   }
@@ -401,6 +418,18 @@ export const DoubleTextColumnsSection = styled.article`
 
         &:last-child {
           margin-top: 64px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    > div {
+      > div {
+        padding: 0 24px;
+        > ul {
+          display: flex;
+          flex-direction: column;
         }
       }
     }

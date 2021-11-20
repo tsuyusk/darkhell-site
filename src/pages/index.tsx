@@ -120,19 +120,37 @@ const Home: React.FC = () => {
               </h1>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
+                • Dark Hell é uma empresa corporativa criada em novembro de
+                2020, com o objetivo de dominar as ramificações de
+                entretenimento digital e conteúdos gerais da internet, sendo
+                capaz de participar de diversos temas diferentes da internet, e
+                reunir diferentes tipos de pessoas e qualificações em apenas um
+                lugar.
+                <br />
+                <br />
+                • Ela esta começando a se estabelecer no mundo digital há cerca
+                um ano, e tem demonstrado um crescimento muito bom em seus
+                vários projetos, e isso é demonstrado fortemente através da
+                criação rápida e de qualidade de seu site, ou através da
+                explosão de visualizações no canal do Youtube, batendo 50 mil de
+                visualizações no canal em menos de um mês.
+                <br />
+                <br />
+                • Os meios de comunicação da Dark Hell são devidamente
+                tematizados com base no inferno da mitologia judaica, e temos
+                cores roxas e pretas como cores base, além do seu próprio
+                símbolo, que representa as asas angelicais que caem
+                <br />
+                <br />• Os membros desta corporação seguem um sistema de
+                hierarquia muito rigoroso e com seus participantes devidamente
+                selecionados de acordo com seus feitos e atividades dentro da
+                corporação.
               </p>
             </div>
           </Content>
         </S.ImageTextSection>
 
-        <S.ImageTextSection reverseRow>
+        {/* <S.ImageTextSection reverseRow>
           <Content>
             <img src="/assets/person_hand.png" alt="Dark Hell" />
 
@@ -153,22 +171,16 @@ const Home: React.FC = () => {
               </p>
             </div>
           </Content>
-        </S.ImageTextSection>
+        </S.ImageTextSection> */}
 
         <S.TopDoubleTextSection>
           <header>
             <Content>
               <h1>
-                Como funciona a <span>Dark Hell</span> ?
+                <span>Hierarquia</span>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
+                <br />
               </p>
             </Content>
           </header>
@@ -177,42 +189,42 @@ const Home: React.FC = () => {
             <Slider>
               <div>
                 <S.Card>
-                  <strong>Lorde</strong>
+                  <strong>Lord 𖤍</strong>
                   <span>(Lider)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />
 
                 <S.Card>
-                  <strong>Leviatã</strong>
+                  <strong>Leviatã 〆</strong>
                   <span>(Co-lider)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />
 
                 <S.Card>
-                  <strong>Potestade</strong>
+                  <strong>Potestade ⸸</strong>
                   <span>(Assembléia)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />
 
                 <S.Card>
-                  <strong>Cérbero</strong>
+                  <strong>Cérbero ૪</strong>
                   <span>(Alto escalão)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />
 
                 <S.Card>
-                  <strong>Demônio</strong>
+                  <strong>Demônio ᛘ</strong>
                   <span>(Membro Oficial)</span>
                 </S.Card>
 
                 <Icons.FiChevronRight size={48} />
 
                 <S.Card>
-                  <strong>Pecador</strong>
+                  <strong>Pecador ⌤</strong>
                   <span>(Novato)</span>
                 </S.Card>
               </div>
@@ -224,16 +236,13 @@ const Home: React.FC = () => {
           <header>
             <Content>
               <h1>
-                O que são os <span>setores</span> ?
+                <span>Setores</span>
               </h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
+                O funcionamento da Dark Hell é através de divisões chamadas de
+                setores, cada setor é voltado a administração de uma determinada
+                área específica, e tem uma administração honrosa de um líder e
+                um co-líder pra cada setor.
               </p>
             </Content>
           </header>
@@ -242,38 +251,57 @@ const Home: React.FC = () => {
             <Slider>
               <div>
                 <S.SectorCard>
-                  <h1>
-                    Setor <span>Hacker</span>
+                  <h1 aria-labelledby="Setor Hacker">
+                    sєтσя <span>нคcкεг</span>
                   </h1>
-                  <span>Administrado por Ric</span>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
+                    O setor hacker é o setor responsável por todas tarefas e
+                    atividades relacionadas a tecnologia, desde programação e
+                    desenvolvimento, até hacking e pentest, qualquer coisa
+                    relacionada a tecnologia fica encaminhado a esse setor.
+                    <br />
+                    O setor hacker tem 2 subdivisões, sendo elas:
+                    <br />
+                    - Dev
+                    <br />
+                    - Invasão
+                    <br />
+                    <br />ℒ Líderes
+                    <br /> ♛ Líder: Imperador RIC
+                    <br /> ♚ Sub-Líder: CCA-469
                   </p>
                 </S.SectorCard>
 
                 <S.SectorCard>
-                  <h1>
-                    Setor <span>Conteúdo</span>
+                  <h1 aria-labelledby="Setor de Conteudo">
+                    Sєтσя ∂є <span>Cσηтєυ∂σ</span>
                   </h1>
-                  <span>Administrado por Louis</span>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
+                    Setor de Conteúdo é o setor da Dark Hell responsável pelo
+                    visual, aparência, marketing e como o nome bem diz, o
+                    conteúdo dos seus meios de comunicação.
+                    <br />
+                    Esse setor é palco de planejamento e produção de vídeos e
+                    imagens usados em todos os meios da Dark Hell e tem como
+                    subdivisões as seguintes categorias:
+                    <br />
+                    - Edição
+                    <br />
+                    - Música
+                    <br />
+                    - Roteiro
+                    <br />
+                    - Publicidade
+                    <br />
+                    - Apresentação
+                    <br />
+                    <br />
+                    ℒ Líderes
+                    <br />
+                    ♛ Líder: Louis
+                    <br />♚ Sub-Líder: Viic
                   </p>
                 </S.SectorCard>
 
@@ -299,32 +327,90 @@ const Home: React.FC = () => {
           </main>
         </S.TopDoubleTextSection>
 
-        <S.DoubleTextColumnsSection>
+        <S.TextLiListSection>
           <Content>
             <div>
               <h1>
-                E quais são <br /> as <span>regras</span>?
+                Constituição <span>Hell</span>
               </h1>
+
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem. Ut enim ad minima veniam, quis nostrum
-                exercitationem ullam corporis suscipit laboriosam, nisi ut
-                aliquid ex ea commodi consequatur? Quis autem vel eum iure
-                reprehenderit qui in ea voluptate velit esse quam nihil
-                molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                voluptas nulla pariatur?
+                A Dark Hell segue um sistema de regras simples com intuito de
+                manter a ordem e boa convivência entre os membros e setores.
               </p>
+
+              <ul>
+                <li>
+                  1b2 - A hierarquia deve ser devidamente respeitada e cada
+                  membro deve reconhecer a sua posição e se tiver qualquer
+                  descontentamento deve se retratar com a potestade
+                </li>
+                <li>
+                  1b3 - Comportamento indesejado não será tolerado, conduta é o
+                  básico a ser exigido de todos os membros. A ordem dentro dos
+                  meios de comunicação é uma necessidade prioritária.
+                  <br />
+                  <br />
+                  Segue a baixo a lista proibições:
+                  <br />
+                  <br />- Conteúdo sensível ou nocivo
+                  <br />- Divulgação sem autorização
+                  <br />
+                  superior
+                  <br />- Inatividade por mais que duas
+                  <br />
+                  semanas
+                  <br />- Áudios com intensão de
+                  <br />
+                  perturbar
+                  <br />- Mensagens em excesso
+                  <br />
+                  (spam)
+                  <br />- Desrespeito no geral
+                  <br />- Conteúdo vulgar
+                </li>
+                <li>
+                  1b4 - Todas as informações faladas dentro da corporação devem
+                  ser mantidas em sigilo se necessário. Vazamento de informações
+                  serão penalizados severamente,
+                </li>
+                <li>
+                  1b5 - Os direitos de imagem não devem ser violados, não é
+                  permitido utilização sem permissão superior qualquer conteúdo,
+                  imagem, nome, vídeo, música, nome de membros ou qualquer que
+                  sejao material de pose interna
+                </li>
+                <li>
+                  1b6 - Na ausência do Lord, quem toma as decisões e tem total
+                  responsabilidade por tudo que acontecer é o leviatã, ele está
+                  liberado a fazer o que for preciso.
+                </li>
+                <li>
+                  Na ausência do Lord e leviatã a assembleia da potestade estará
+                  no comando e está responsável por tudo que ocorrer, para que
+                  uma decisão seja tomada oficialmente pela potestade, a maioria
+                  da potestade deve concorda com tal ação, as ações só são
+                  oficiais se a maioria concorda com o ato, se somente a minoria
+                  concorda com alguma determinada ação, ela será desconsidera.
+                </li>
+                <li>
+                  1b8 - Advertências vão de uma três e dependendo da gravidade
+                  das ações o membro receberá uma advertência, ao internar três
+                  ele será permanentemente banido. Cada advertência é perdoada
+                  após aquela própria advertência completar 30 dias de idade.
+                  Dependendo da gravidade da ação o membro pode ser desligado
+                  imediatamente.
+                </li>
+                <li>
+                  1b9 - Uso de imagem pessoale dados pessoais dentro dos nossos
+                  meios de comunicação estão permanentemente proibidas e serão
+                  severamente penalizados os membros que desobedecerem tal
+                  regra.
+                </li>
+              </ul>
             </div>
           </Content>
-        </S.DoubleTextColumnsSection>
+        </S.TextLiListSection>
 
         <S.SingleTextColumnCardsRight>
           <Content>
@@ -335,13 +421,10 @@ const Home: React.FC = () => {
               </h1>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
+                Parar entrar na Dark Hell como um membro participante você deve
+                ser indicado por um membro de classe demônio para cima, e ser
+                aprovado pelo Lord, ou leviatã. Mas alguns meios como o Discord
+                são abertos ao público
               </p>
             </div>
 
@@ -349,16 +432,16 @@ const Home: React.FC = () => {
               <S.WayOfenteringCard>
                 <h1>Indicação</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Um membro de classe igual ou superior a Demônio deve te
+                  indicar para o Lord ou o Leviatã.
                 </p>
               </S.WayOfenteringCard>
 
               <S.WayOfenteringCard>
-                <h1>Candidatar-se</h1>
+                <h1>Discord</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Você deve entrar no Discord da Dark Hell e se candidatar para
+                  o Lord.
                 </p>
               </S.WayOfenteringCard>
             </div>

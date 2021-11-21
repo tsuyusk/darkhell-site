@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
   return (
     <S.Container>
       <div>
-        <img src="/assets/DarkHell_Logo_Symbol.png" alt="Dark Hell" />
+        <img src="/assets/DarkHell_Logo_Symbol_NoShadow.png" alt="Dark Hell" />
 
         <nav>
           <a href="#">Início</a>

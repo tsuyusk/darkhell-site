@@ -391,12 +391,13 @@ const Home: React.FC = () => {
                   liberado a fazer o que for preciso.
                 </li>
                 <li>
-                  Na ausência do Lord e leviatã a assembleia da potestade estará
-                  no comando e está responsável por tudo que ocorrer, para que
-                  uma decisão seja tomada oficialmente pela potestade, a maioria
-                  da potestade deve concorda com tal ação, as ações só são
-                  oficiais se a maioria concorda com o ato, se somente a minoria
-                  concorda com alguma determinada ação, ela será desconsidera.
+                  1b7 - Na ausência do Lord e leviatã a assembleia da potestade
+                  estará no comando e está responsável por tudo que ocorrer,
+                  para que uma decisão seja tomada oficialmente pela potestade,
+                  a maioria da potestade deve concorda com tal ação, as ações só
+                  são oficiais se a maioria concorda com o ato, se somente a
+                  minoria concorda com alguma determinada ação, ela será
+                  desconsidera.
                 </li>
                 <li>
                   1b8 - Advertências vão de uma três e dependendo da gravidade

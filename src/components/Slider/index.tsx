@@ -5,34 +5,31 @@ import * as S from '@/styles/components/Slider';
 
 interface SliderProps {
   slidedScrollLeftPerClick?: number;
+  maxWidth?: string;
+  style?: object;
   children: any;
 }
 
 export const Slider: React.FC<SliderProps> = ({
   slidedScrollLeftPerClick = 64,
+  maxWidth,
+  style,
   children,
 }) => {
-  const position = useRef(null);
   const itemsDiv = useRef<HTMLDivElement>(null);
 
   const handleScrollLeft = useCallback(() => {
     if (!itemsDiv.current) return;
-    if (position.current - 1 < 0) return;
-
-    position.current -= 1;
     itemsDiv.current.scrollLeft -= slidedScrollLeftPerClick;
   }, [slidedScrollLeftPerClick]);
 
   const handleScrollRight = useCallback(() => {
     if (!itemsDiv.current) return;
-    if (position.current + 1 > Children.count(children.props.children)) return;
-
-    position.current += 1;
     itemsDiv.current.scrollLeft += slidedScrollLeftPerClick;
   }, [slidedScrollLeftPerClick]);
 
   return (
-    <S.Container>
+    <S.Container style={style}>
       <S.SliderButtons>
         <button onClick={handleScrollLeft}>
           <Icons.FiArrowLeft size={36} />
@@ -43,7 +40,9 @@ export const Slider: React.FC<SliderProps> = ({
         </button>
       </S.SliderButtons>
 
-      <S.Items ref={itemsDiv}>{children}</S.Items>
+      <S.Items maxWidth={maxWidth} ref={itemsDiv}>
+        {children}
+      </S.Items>
     </S.Container>
   );
 };

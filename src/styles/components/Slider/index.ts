@@ -1,9 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-
-  padding: 0 48px;
 `;
 
 export const SliderButtons = styled.div`
@@ -18,7 +16,6 @@ export const SliderButtons = styled.div`
 
   width: 100%;
   height: 36px;
-  padding: 0 6px;
 
   > button {
     height: 40px;
@@ -30,11 +27,16 @@ export const SliderButtons = styled.div`
   }
 `;
 
-export const Items = styled.div`
+interface ItemsProps {
+  maxWidth?: string;
+}
+
+export const Items = styled.div<ItemsProps>`
   display: flex;
-  max-width: 100vw;
+  max-width: ${props => props.maxWidth || '1100px'};
+
   overflow: scroll;
-  padding: 16px;
+  padding: 8px;
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {

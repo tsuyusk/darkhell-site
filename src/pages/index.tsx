@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 
   return (
     <S.Container>
-      <SEO title="Dark hell" shouldExcludeTitleSuffix />
+      <SEO title="Dark Hell" shouldExcludeTitleSuffix />
       <Header
         leftLinks={
           <>
@@ -53,9 +53,9 @@ const Home: React.FC = () => {
 
             <button onClick={handleSwitchTheme}>
               {themeName === 'light' ? (
-                <Icons.FiMoon size={24} color={white_text} />
-              ) : (
                 <Icons.FiSun size={24} color={white_text} />
+              ) : (
+                <Icons.FiMoon size={24} color={white_text} />
               )}
             </button>
           </>
@@ -66,9 +66,17 @@ const Home: React.FC = () => {
         <Content>
           <div>
             <h1>Dark Hell</h1>
-            <strong>
+            {/* <strong>
               O inferno está vazio, <br /> os demônios já estão fora.
-            </strong>
+            </strong> */}
+            <p>
+              O Diabo, que as enganava, foi lançado no lago de fogo que arde com
+              enxofre, onde já haviam sido lançados a besta e o falso profeta.
+              Eles serão atormentados dia e noite, para todo o sempre.
+              <br />
+              <br />
+              Bem vindo ao <span>Inferno</span>
+            </p>
 
             <nav>
               <a
@@ -106,6 +114,8 @@ const Home: React.FC = () => {
           controls={false}
           loop
         />
+
+        <S.VideoSectionFade />
       </S.Banner>
 
       <S.WhoWeAre ref={aboutUsRef}>
@@ -176,171 +186,164 @@ const Home: React.FC = () => {
           </Content>
         </S.ImageTextSection> */}
 
-        <S.TopDoubleTextSection>
-          <header>
-            <Content>
-              <h1>
-                <span>Hierarquia</span>
-              </h1>
-              <p>
-                <br />
-              </p>
-            </Content>
-          </header>
+        <S.ColumnDoubleTextContentSide shouldAlignTitleCenter>
+          <Content>
+            <div>
+              <header>
+                <h1>
+                  <span>Hierarquia</span>
+                </h1>
+              </header>
 
-          <main>
-            <Slider slidedScrollLeftPerClick={195 + 21 + 21 + 48}>
-              <div>
-                <S.Card>
-                  <strong>Lord 𖤍</strong>
-                  <span>(Lider)</span>
-                </S.Card>
+              <main>
+                <div>
+                  <Slider
+                    maxWidth={'90vw'}
+                    slidedScrollLeftPerClick={195 + 21 + 21 + 48}
+                  >
+                    <div>
+                      <S.Card>
+                        <strong>Lord 𖤍</strong>
+                        <span>(Lider)</span>
+                      </S.Card>
 
-                <Icons.FiChevronRight size={48} />
+                      <Icons.FiChevronRight size={48} />
 
-                <S.Card>
-                  <strong>Leviatã 〆</strong>
-                  <span>(Co-lider)</span>
-                </S.Card>
+                      <S.Card>
+                        <strong>Leviatã 〆</strong>
+                        <span>(Co-lider)</span>
+                      </S.Card>
 
-                <Icons.FiChevronRight size={48} />
+                      <Icons.FiChevronRight size={48} />
 
-                <S.Card>
-                  <strong>Potestade ⸸</strong>
-                  <span>(Assembléia)</span>
-                </S.Card>
+                      <S.Card>
+                        <strong>Potestade ⸸</strong>
+                        <span>(Assembléia)</span>
+                      </S.Card>
 
-                <Icons.FiChevronRight size={48} />
+                      <Icons.FiChevronRight size={48} />
 
-                <S.Card>
-                  <strong>Cérbero ૪</strong>
-                  <span>(Alto escalão)</span>
-                </S.Card>
+                      <S.Card>
+                        <strong>Cérbero ૪</strong>
+                        <span>(Alto escalão)</span>
+                      </S.Card>
 
-                <Icons.FiChevronRight size={48} />
+                      <Icons.FiChevronRight size={48} />
 
-                <S.Card>
-                  <strong>Demônio ᛘ</strong>
-                  <span>(Membro Oficial)</span>
-                </S.Card>
+                      <S.Card>
+                        <strong>Demônio ᛘ</strong>
+                        <span>(Membro Oficial)</span>
+                      </S.Card>
 
-                <Icons.FiChevronRight size={48} />
+                      <Icons.FiChevronRight size={48} />
 
-                <S.Card>
-                  <strong>Pecador ⌤</strong>
-                  <span>(Novato)</span>
-                </S.Card>
-              </div>
-            </Slider>
-          </main>
-        </S.TopDoubleTextSection>
+                      <S.Card>
+                        <strong>Pecador ⌤</strong>
+                        <span>(Novato)</span>
+                      </S.Card>
+                    </div>
+                  </Slider>
+                </div>
+              </main>
+            </div>
+          </Content>
+        </S.ColumnDoubleTextContentSide>
 
-        <S.TopDoubleTextSection>
-          <header>
-            <Content>
-              <h1>
-                <span>Setores</span>
-              </h1>
-              <p>
-                O funcionamento da Dark Hell é através de divisões chamadas de
-                setores, cada setor é voltado a administração de uma determinada
-                área específica, e tem uma administração honrosa de um líder e
-                um co-líder pra cada setor.
-              </p>
-            </Content>
-          </header>
+        <S.ColumnDoubleTextContentSide>
+          <Content>
+            <div>
+              <header>
+                <h1>
+                  <span>Setores</span>
+                </h1>
+              </header>
 
-          <main>
-            <Slider
-              slidedScrollLeftPerClick={
-                window.innerWidth <= 490
-                  ? vwUnityInPx * 80 + 72 + 42
-                  : vwUnityInPx * 64 + 72 + 72
-              }
-            >
-              <div>
-                <S.SectorCard>
-                  <h1 aria-labelledby="Setor Hacker">
-                    sєтσя <span>нคcкεг</span>
-                  </h1>
-
+              <main>
+                <div>
                   <p>
-                    O setor hacker é o setor responsável por todas tarefas e
-                    atividades relacionadas a tecnologia, desde programação e
-                    desenvolvimento, até hacking e pentest, qualquer coisa
-                    relacionada a tecnologia fica encaminhado a esse setor.
-                    <br />
-                    O setor hacker tem 2 subdivisões, sendo elas:
-                    <br />
-                    - Dev
-                    <br />
-                    - Invasão
-                    <br />
-                    <br />ℒ Líderes
-                    <br /> ♛ Líder: Imperador RIC
-                    <br /> ♚ Sub-Líder: CCA-469
+                    A Dark Hell organiza suas operações em departamentos
+                    chamados setor. Cada setor se dedica à gestão e organização
+                    de temas específicos e tem divisões de equipes
+                    especializadas em diferentes areas. Os setores são
+                    administrados por um líder e co-lider eleito pelo Lord em
+                    conjunto com a Potestade. A Dark Hell está operando com os
+                    seguintes departamentos.
                   </p>
-                </S.SectorCard>
 
-                <S.SectorCard>
-                  <h1 aria-labelledby="Setor de Conteudo">
-                    Sєтσя ∂є <span>Cσηтєυ∂σ</span>
-                  </h1>
+                  <Slider
+                    slidedScrollLeftPerClick={
+                      window.innerWidth <= 490
+                        ? vwUnityInPx * 80 + 72 + 42
+                        : vwUnityInPx * 64 + 72 + 72
+                    }
+                    maxWidth={window.innerWidth <= 490 ? '80vw' : '42vw'}
+                    style={
+                      window.innerWidth <= 923
+                        ? { marginLeft: 0, marginTop: 32 }
+                        : { marginLeft: 32 }
+                    }
+                  >
+                    <S.SectorCard>
+                      <h1 aria-labelledby="Setor Hacker">
+                        sєтσя <span>нคcкεг</span>
+                      </h1>
 
-                  <p>
-                    Setor de Conteúdo é o setor da Dark Hell responsável pelo
-                    visual, aparência, marketing e como o nome bem diz, o
-                    conteúdo dos seus meios de comunicação.
-                    <br />
-                    Esse setor é palco de planejamento e produção de vídeos e
-                    imagens usados em todos os meios da Dark Hell e tem como
-                    subdivisões as seguintes categorias:
-                    <br />
-                    - Edição
-                    <br />
-                    - Música
-                    <br />
-                    - Roteiro
-                    <br />
-                    - Publicidade
-                    <br />
-                    - Apresentação
-                    <br />
-                    <br />
-                    ℒ Líderes
-                    <br />
-                    ♛ Líder: Louis
-                    <br />♚ Sub-Líder: Viic
-                  </p>
-                </S.SectorCard>
+                      <p>
+                        O setor hacker é o setor responsável por todas tarefas e
+                        atividades relacionadas a tecnologia, desde programação
+                        e desenvolvimento, até hacking e pentest, qualquer coisa
+                        relacionada a tecnologia fica encaminhado a esse setor.
+                        <br />
+                        <br />
+                        O setor hacker tem 2 subdivisões, sendo elas:
+                        <br />
+                        <br />
+                        - Dev
+                        <br />
+                        - Invasão
+                        <br />
+                        <br /> ♛ Líder: Imperador RIC
+                        <br /> ♚ Sub-Líder: CCA-469
+                      </p>
+                    </S.SectorCard>
 
-                <S.SectorCard>
-                  <h1>
-                    Sєтσя ∂є <span>Publicidade</span>
-                  </h1>
+                    <S.SectorCard>
+                      <h1 aria-labelledby="Setor de Conteudo">
+                        Sєтσя ∂є <span>Cσηтєυ∂σ</span>
+                      </h1>
 
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit voluptatum eius tempore illo possimus ut hic culpa
-                    maiores veniam est ipsum deserunt, quo corporis molestias,
-                    rerum eaque vel nesciunt dolores! Lorem ipsum dolor, sit
-                    amet consectetur adipisicing elit. Ipsa ullam, maiores
-                    consequatur excepturi odio quisquam repudiandae voluptas
-                    atque dolore. Corrupti nostrum voluptas hic repellendus
-                    fugit iusto odit quaerat magnam temporibus. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quia,
-                    repellendus! Blanditiis voluptatibus veritatis officiis
-                    harum fuga, ab quas neque laudantium magni pariatur vel
-                    assumenda eveniet, error nostrum eos minus exercitationem?
-                    <br />
-                    ℒ Líderes
-                    <br />♛ Líder: Said
-                  </p>
-                </S.SectorCard>
-              </div>
-            </Slider>
-          </main>
-        </S.TopDoubleTextSection>
+                      <p>
+                        Setor de Conteúdo é o setor da Dark Hell responsável
+                        pelo visual, aparência, marketing e como o nome bem diz,
+                        o conteúdo dos seus meios de comunicação.
+                        <br />
+                        <br />
+                        Esse setor é palco de planejamento e produção de vídeos
+                        e imagens usados em todos os meios da Dark Hell e tem
+                        como subdivisões as seguintes categorias:
+                        <br />
+                        <br />
+                        - Edição
+                        <br />
+                        - Música
+                        <br />
+                        - Roteiro
+                        <br />
+                        - Publicidade
+                        <br />
+                        - Apresentação
+                        <br />
+                        <br />
+                        ♛ Líder: Louis
+                        <br />♚ Sub-Líder: Viic
+                      </p>
+                    </S.SectorCard>
+                  </Slider>
+                </div>
+              </main>
+            </div>
+          </Content>
+        </S.ColumnDoubleTextContentSide>
 
         <S.TextLiListSection>
           <Content>
@@ -366,23 +369,10 @@ const Home: React.FC = () => {
                   meios de comunicação é uma necessidade prioritária.
                   <br />
                   <br />
-                  Segue a baixo a lista proibições:
-                  <br />
-                  <br />- Conteúdo sensível ou nocivo
-                  <br />- Divulgação sem autorização
-                  <br />
-                  superior
-                  <br />- Inatividade por mais que duas
-                  <br />
-                  semanas
-                  <br />- Áudios com intensão de
-                  <br />
-                  perturbar
-                  <br />- Mensagens em excesso
-                  <br />
-                  (spam)
-                  <br />- Desrespeito no geral
-                  <br />- Conteúdo vulgar
+                  Proibições: <br /> Conteúdo sensível ou nocivo, divulgação sem
+                  autorização, superior, inatividade por mais que duas ,
+                  semanas, áudios com intensão de, perturbar , Mensagens em
+                  excesso (spam), Desrespeito no geral, Conteúdo vulgar
                 </li>
                 <li>
                   1b4 - Todas as informações faladas dentro da corporação devem

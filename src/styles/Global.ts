@@ -13,6 +13,7 @@ export const Global = createGlobalStyle`
     min-height: 100%;
     width: 100%;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   html {

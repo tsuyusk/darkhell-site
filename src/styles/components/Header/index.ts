@@ -18,6 +18,7 @@ export const Container = styled.header<ContainerProps>`
   background: ${props => props.theme.dark_bg};
 
   > div {
+    position: relative;
     align-items: center;
     justify-content: space-between;
 
@@ -28,11 +29,17 @@ export const Container = styled.header<ContainerProps>`
       width: 100%;
 
       > img {
-        width: 48px;
-        height: 48px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
         pointer-events: none;
-        box-shadow: 0 0 16px rgb(122, 32, 154);
+
+        object-fit: center;
+        object-position: center;
       }
 
       > div {

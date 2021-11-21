@@ -41,9 +41,9 @@ export const Banner = styled.section`
   position: relative;
 
   width: 100%;
-  height: 90vh;
-  padding-top: 80px;
-  overflow-x: hidden;
+  min-height: 82vh;
+  padding: 80px 0;
+  overflow-y: visible;
 
   > div {
     display: flex;
@@ -53,7 +53,7 @@ export const Banner = styled.section`
       flex-direction: column;
 
       color: ${props => props.theme.white_text};
-      padding: 76px 0;
+      padding: 76px 0 12px;
 
       > h1 {
         font-size: 6.4rem;
@@ -63,13 +63,18 @@ export const Banner = styled.section`
         text-shadow: 0 0 16px rgb(122, 32, 154);
       }
 
-      > strong {
-        color: ${props => props.theme.white_text_alt};
-        font-weight: 500;
+      > p {
+        color: ${props => props.theme.strong_white};
+        font-weight: 400;
         font-size: 1.8rem;
         line-height: 2.4rem;
+        max-width: 430px;
 
-        margin: 50px 0 75px;
+        margin: 32px 0 38px;
+
+        > span {
+          text-shadow: 0 0 12px rgba(255, 255, 255, 1);
+        }
       }
 
       > nav {
@@ -118,8 +123,19 @@ export const Banner = styled.section`
   }
 
   @media (max-width: 332px) {
-    height: 95vh;
+    min-height: 95vh;
   }
+`;
+
+export const VideoSectionFade = styled.div`
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+
+  background: ${props => props.theme.background};
+  filter: blur(12px);
+  width: 104%;
+  height: 48px;
 `;
 
 export const WhoWeAre = styled.section`
@@ -239,38 +255,57 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
   }
 `;
 
-export const TopDoubleTextSection = styled.article`
+interface ColumnDoubleTextContentSideProps {
+  shouldAlignTitleCenter?: boolean;
+}
+
+export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextContentSideProps>`
   width: 100%;
 
-  > header {
-    width: 100%;
-
+  > div {
     > div {
-      display: flex;
-      justify-content: space-between;
+      > header {
+        display: flex;
+        width: 100%;
 
-      > h1 {
-        ${sectionTitle};
+        ${props =>
+          props.shouldAlignTitleCenter &&
+          css`
+            justify-content: center;
+          `};
+
+        > h1 {
+          ${sectionTitle};
+        }
       }
 
-      > p {
-        ${sectionText};
-      }
-    }
-  }
+      > main {
+        width: 100%;
 
-  > main {
-    width: 100%;
-
-    > div {
-      > div {
         > div {
+          margin-top: 51px;
           display: flex;
-          align-items: center;
-          margin-top: 32px;
+          justify-content: space-between;
 
-          > svg {
-            margin: 0 21px;
+          > p {
+            width: 420px;
+
+            ${sectionText};
+          }
+
+          > div {
+            > div,
+            > div > div {
+              display: flex;
+            }
+
+            > div > div {
+              align-items: center;
+
+              > svg {
+                margin: 0 21px;
+              }
+            }
           }
         }
       }
@@ -292,6 +327,18 @@ export const TopDoubleTextSection = styled.article`
       }
     }
   }
+
+  @media (max-width: 923px) {
+    > div {
+      > div {
+        > main {
+          > div {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -303,7 +350,7 @@ export const Card = styled.div`
 
   background: ${props => props.theme.dark_bg};
   width: 195px;
-  height: 322px;
+  height: 195px;
   border-radius: 4px;
 
   box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
@@ -333,7 +380,7 @@ export const SectorCard = styled.div`
 
   color: ${props => props.theme.white_text};
   background: ${props => props.theme.dark_bg};
-  width: 64vw;
+  width: 40vw;
   min-height: 468px;
   border-radius: 4px;
 
@@ -354,10 +401,8 @@ export const SectorCard = styled.div`
   }
 
   > p {
-    color: ${props => props.theme.white_text_alt};
+    ${sectionText};
     margin-top: 12px;
-    font-size: 1.6rem;
-    line-height: 147.02%;
   }
 
   & + div {
@@ -365,7 +410,7 @@ export const SectorCard = styled.div`
   }
 
   @media (max-width: 490px) {
-    width: 80vw;
+    width: 74vw;
   }
 `;
 

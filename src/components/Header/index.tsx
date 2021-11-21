@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ leftLinks, rightLinks }) => {
         <nav>
           <div>{leftLinks}</div>
 
-          <img src="/logo.jpg" alt="Dark Hell" />
+          <img src="/assets/DarkHell_Logo_Symbol.png" alt="Dark Hell" />
 
           <div>{rightLinks}</div>
         </nav>

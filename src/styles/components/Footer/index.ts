@@ -10,6 +10,20 @@ export const Container = styled.footer`
   width: 100%;
 
   > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > img {
+      width: 80px;
+      height: 80px;
+      object-fit: center;
+      object-position: center;
+      border-radius: 50%;
+      pointer-events: none;
+      margin-bottom: 32px;
+    }
+
     > nav {
       > a {
         color: ${props => props.theme.white_text_alt};
@@ -42,14 +56,6 @@ export const Container = styled.footer`
 
       > * + * {
         margin-left: 46px;
-      }
-
-      > img {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        pointer-events: none;
-        box-shadow: 0 0 16px rgb(122, 32, 154);
       }
     }
     > div {

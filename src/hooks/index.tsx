@@ -7,7 +7,7 @@ import { darkTheme } from '@/styles/themes/dark';
 import { usePersistedState } from '@/utils/usePersistedState';
 
 export const RootProvider: React.FC = ({ children }) => {
-  const [themeName, setThemeName] = usePersistedState('theme', 'light');
+  const [themeName, setThemeName] = usePersistedState('theme', 'dark');
 
   const storagedTheme = useMemo(() => {
     return themeName === 'light' ? lightTheme : darkTheme;

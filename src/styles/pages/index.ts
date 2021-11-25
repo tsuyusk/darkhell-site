@@ -21,7 +21,7 @@ const sectionText = css`
   font-size: 1.8rem;
   line-height: 2.6rem;
   max-width: 502px;
-  color: ${props => props.theme.text_2};
+  color: ${props => props.theme.gray_text};
 
   @media (max-width: 923px) {
     text-align: left;

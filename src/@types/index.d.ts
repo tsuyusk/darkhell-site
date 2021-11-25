@@ -11,6 +11,7 @@ declare module 'styled-components' {
     white_text: string;
     white_text_alt: string;
     strong_white: string;
+    gray_text: string;
 
     fonts: {
       roboto: string;

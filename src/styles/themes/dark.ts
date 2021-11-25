@@ -8,6 +8,7 @@ export const darkTheme = {
   white_text: '#CFCBBC',
   white_text_alt: '#918e83',
   strong_white: '#fff',
+  gray_text: '#918e83',
   fonts: {
     roboto: 'Roboto',
     inter: 'Inter',

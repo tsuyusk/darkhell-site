@@ -17,7 +17,9 @@ export const SEO: React.FC<SEOProps> = ({
   shouldIndexPage = true,
 }) => {
   const pageTitle = `${title} ${shouldExcludeTitleSuffix ? '' : '/#Dark Hell'}`;
-  const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null;
+  const pageImage = image
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}`
+    : null;
 
   return (
     <Head>
@@ -33,6 +35,10 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="msapplication-TileColor" content="#121212" />
       <meta name="referrer" content="no-referrer-when-downgrade" />
       <meta name="google" content="notranslate" />
+      <meta
+        name="google-site-verification"
+        content="rh8tWsi37JemVSQEQYwSQkL3Q9wYjTbl2UOTh03Pyhc"
+      />
 
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
@@ -57,4 +63,4 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image:height" content="620" />
     </Head>
   );
-}
+};

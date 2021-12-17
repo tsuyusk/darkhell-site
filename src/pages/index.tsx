@@ -38,7 +38,16 @@ const Home: React.FC = () => {
 
   return (
     <S.Container>
-      <SEO title="Dark Hell" shouldExcludeTitleSuffix />
+      <SEO
+        title="Dark Hell"
+        description="Dark Hell é uma empresa corporativa criada em novembro de
+        2020, com o objetivo de dominar as ramificações de
+        entretenimento digital e conteúdos gerais da internet, sendo
+        capaz de participar de diversos temas diferentes da internet, e
+        reunir diferentes tipos de pessoas e qualificações em apenas um
+        lugar."
+        shouldExcludeTitleSuffix
+      />
       <Header
         leftLinks={
           <>

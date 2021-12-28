@@ -1,5 +1,4 @@
-import React, { useCallback, useMemo, useRef } from 'react';
-import { useTheme } from 'styled-components';
+import React, { useMemo, useRef } from 'react';
 import * as Icons from 'react-icons/fi';
 
 import { Header } from '@/components/Header';
@@ -7,33 +6,13 @@ import { Footer } from '@/components/Footer';
 import { Content } from '@/components/Content';
 import { Slider } from '@/components/Slider';
 import { SEO } from '@/components/SEO';
-import { useCustomThemeProvider } from '@/hooks/theme';
 import * as S from '@/styles/pages/index';
 
 const Home: React.FC = () => {
-  const { handleSwitchTheme, themeName } = useCustomThemeProvider();
-  const { white_text } = useTheme();
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);
   const vwUnityInPx = useMemo(() => {
     return window.innerWidth / 100;
-  }, []);
-
-  const goTo = useCallback((sectionName: string) => {
-    const handlers = {
-      LandingPageTop: () => {
-        window.scrollTo({
-          top: bannerRef.current?.offsetTop,
-        });
-      },
-      AboutUs: () => {
-        window.scrollTo({
-          top: aboutUsRef.current?.offsetTop,
-        });
-      },
-    };
-
-    return handlers[sectionName] || function () {};
   }, []);
 
   return (
@@ -48,28 +27,7 @@ const Home: React.FC = () => {
         lugar."
         shouldExcludeTitleSuffix
       />
-      <Header
-        leftLinks={
-          <>
-            <button onClick={goTo('Banner')}>Início</button>
-            <button onClick={goTo('AboutUs')}>Sobre Nós</button>
-          </>
-        }
-        rightLinks={
-          <>
-            <a href="#">Loja</a>
-            <a href="#">Notícias</a>
-
-            <button onClick={handleSwitchTheme}>
-              {themeName === 'light' ? (
-                <Icons.FiSun size={24} color={white_text} />
-              ) : (
-                <Icons.FiMoon size={24} color={white_text} />
-              )}
-            </button>
-          </>
-        }
-      />
+      <Header />
 
       <S.Banner ref={bannerRef}>
         <Content>

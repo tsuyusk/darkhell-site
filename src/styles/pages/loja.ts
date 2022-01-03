@@ -68,7 +68,14 @@ export const TitleContainer = styled.div`
 `;
 
 export const ShopList = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
+
+  > div {
+    flex-direction: column;
+  }
 `;
 
 export const Sector = styled.div`
@@ -91,7 +98,7 @@ export const SellItems = styled.div`
   > hr {
     border-top: 1px solid ${props => props.theme.dark_bg};
     width: 124px;
-    margin: 24px 0;
+    margin: 48px 0;
   }
 `;
 
@@ -105,6 +112,7 @@ export const Item = styled.div`
     width: 300px;
     height: 300px;
     background: ${props => props.theme.gray_text};
+    border-radius: 6px;
   }
 
   > div {

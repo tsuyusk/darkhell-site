@@ -37,7 +37,84 @@ const Shop: React.FC = () => {
             </h1>
 
             <S.SellItems>
-              <Item />
+              <Item
+                text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                aliquam mollitia voluptates, harum ut ea obcaecati doloremque dolor
+                perferendis modi adipisci nesciunt vitae cumque nulla necessitatibus
+                tenetur magnam quos libero. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Libero vel neque ipsa reprehenderit reiciendis a
+                dicta eum illo beatae dolor quibusdam eius delectus, suscipit, magni
+                voluptas labore ab error consectetur! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Odio sed ab a laudantium modi eligendi
+                ut minima itaque quidem tempore vel, harum esse, veritatis deserunt
+                omnis. Vero adipisci quos nisi. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Voluptatibus, quisquam, facilis, natus
+                in impedit nesciunt pariatur veritatis eum harum quibusdam molestias
+                cumque quasi saepe distinctio cupiditate? Laboriosam optio quo ipsa.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                molestiae hic aliquid quidem repudiandae vel fugiat odit, quibusdam
+                voluptates temporibus quas numquam nulla? Accusantium, omnis soluta.
+                Sed magni atque magnam."
+                title="Venda de "
+                titleBoldTextPart="sites"
+                price={300}
+              />
+              <hr />
+
+              <Item
+                text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                aliquam mollitia voluptates, harum ut ea obcaecati doloremque dolor
+                perferendis modi adipisci nesciunt vitae cumque nulla necessitatibus
+                tenetur magnam quos libero. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Libero vel neque ipsa reprehenderit reiciendis a
+                dicta eum illo beatae dolor quibusdam eius delectus, suscipit, magni
+                voluptas labore ab error consectetur! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Odio sed ab a laudantium modi eligendi
+                ut minima itaque quidem tempore vel, harum esse, veritatis deserunt
+                omnis. Vero adipisci quos nisi. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Voluptatibus, quisquam, facilis, natus
+                in impedit nesciunt pariatur veritatis eum harum quibusdam molestias
+                cumque quasi saepe distinctio cupiditate? Laboriosam optio quo ipsa.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                molestiae hic aliquid quidem repudiandae vel fugiat odit, quibusdam
+                voluptates temporibus quas numquam nulla? Accusantium, omnis soluta.
+                Sed magni atque magnam."
+                title="Serviços de "
+                titleBoldTextPart="pentesting"
+                price={250}
+              />
+              <hr />
+            </S.SellItems>
+          </S.Sector>
+
+          <S.Sector>
+            <h1>
+              Setor de <span>conteúdo</span>
+            </h1>
+
+            <S.SellItems>
+              <Item
+                text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+                aliquam mollitia voluptates, harum ut ea obcaecati doloremque dolor
+                perferendis modi adipisci nesciunt vitae cumque nulla necessitatibus
+                tenetur magnam quos libero. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Libero vel neque ipsa reprehenderit reiciendis a
+                dicta eum illo beatae dolor quibusdam eius delectus, suscipit, magni
+                voluptas labore ab error consectetur! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Odio sed ab a laudantium modi eligendi
+                ut minima itaque quidem tempore vel, harum esse, veritatis deserunt
+                omnis. Vero adipisci quos nisi. Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Voluptatibus, quisquam, facilis, natus
+                in impedit nesciunt pariatur veritatis eum harum quibusdam molestias
+                cumque quasi saepe distinctio cupiditate? Laboriosam optio quo ipsa.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                molestiae hic aliquid quidem repudiandae vel fugiat odit, quibusdam
+                voluptates temporibus quas numquam nulla? Accusantium, omnis soluta.
+                Sed magni atque magnam."
+                title="Divulgação de "
+                titleBoldTextPart="produtos"
+                price={285}
+              />
               <hr />
             </S.SellItems>
           </S.Sector>
@@ -49,7 +126,21 @@ const Shop: React.FC = () => {
   );
 };
 
-const Item: React.FC = () => {
+interface ItemProps {
+  image?: string;
+  title: string;
+  titleBoldTextPart?: string;
+  price?: number;
+  text: string;
+}
+
+const Item: React.FC<ItemProps> = ({
+  image,
+  title,
+  titleBoldTextPart,
+  price,
+  text,
+}) => {
   return (
     <S.Item>
       <img
@@ -60,32 +151,14 @@ const Item: React.FC = () => {
       <div>
         <header>
           <h1>
-            Venda de <span>sites</span>
+            {title} <span>{titleBoldTextPart}</span>
           </h1>
 
-          <strong>R$ 300</strong>
+          <strong>R$ {price}</strong>
         </header>
 
         <main>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-            aliquam mollitia voluptates, harum ut ea obcaecati doloremque dolor
-            perferendis modi adipisci nesciunt vitae cumque nulla necessitatibus
-            tenetur magnam quos libero. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Libero vel neque ipsa reprehenderit reiciendis a
-            dicta eum illo beatae dolor quibusdam eius delectus, suscipit, magni
-            voluptas labore ab error consectetur! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Odio sed ab a laudantium modi eligendi
-            ut minima itaque quidem tempore vel, harum esse, veritatis deserunt
-            omnis. Vero adipisci quos nisi. Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptatibus, quisquam, facilis, natus
-            in impedit nesciunt pariatur veritatis eum harum quibusdam molestias
-            cumque quasi saepe distinctio cupiditate? Laboriosam optio quo ipsa.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            molestiae hic aliquid quidem repudiandae vel fugiat odit, quibusdam
-            voluptates temporibus quas numquam nulla? Accusantium, omnis soluta.
-            Sed magni atque magnam.
-          </p>
+          <p>{text}</p>
         </main>
 
         <footer>

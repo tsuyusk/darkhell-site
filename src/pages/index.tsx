@@ -164,9 +164,25 @@ const Home: React.FC = () => {
 
               <main>
                 <div>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Facere nulla, a provident sed aspernatur fuga vero totam
+                    optio dignissimos quos! Corrupti debitis libero delectus
+                    modi voluptates unde, aperiam quae architecto! Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Eveniet,
+                    voluptas. Laborum nostrum qui molestias sint. Doloribus quo
+                    fugit deserunt. Optio eligendi quasi maxime voluptatum quod
+                    inventore laborum repellendus autem culpa!
+                  </p>
+
                   <Slider
-                    maxWidth={'90vw'}
+                    maxWidth={window.innerWidth <= 490 ? '80vw' : '42vw'}
                     slidedScrollLeftPerClick={195 + 21 + 21 + 48}
+                    style={
+                      window.innerWidth <= 923
+                        ? { marginLeft: 0, marginTop: 32 }
+                        : { marginLeft: 32 }
+                    }
                   >
                     <div>
                       <S.Card>
@@ -216,7 +232,7 @@ const Home: React.FC = () => {
           </Content>
         </S.ColumnDoubleTextContentSide>
 
-        <S.ColumnDoubleTextContentSide>
+        <S.ColumnDoubleTextContentSide shouldAlignTitleCenter>
           <Content>
             <div>
               <header>

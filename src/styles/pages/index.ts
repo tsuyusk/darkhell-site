@@ -276,6 +276,8 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
 
         > h1 {
           ${sectionTitle};
+          text-align: center;
+          margin: 0 auto;
         }
       }
 

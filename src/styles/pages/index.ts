@@ -267,18 +267,6 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
       > header {
         display: flex;
         width: 100%;
-
-        ${props =>
-          props.shouldAlignTitleCenter &&
-          css`
-            justify-content: center;
-          `};
-
-        > h1 {
-          ${sectionTitle};
-          text-align: center;
-          margin: 0 auto;
-        }
       }
 
       > main {
@@ -287,12 +275,19 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
         > div {
           margin-top: 51px;
           display: flex;
+          align-items: center;
           justify-content: space-between;
 
-          > p {
-            width: 420px;
+          > main {
+            > h1 {
+              ${sectionTitle};
+            }
 
-            ${sectionText};
+            > p {
+              width: 420px;
+
+              ${sectionText};
+            }
           }
 
           > div {
@@ -343,12 +338,17 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
   }
 `;
 
-export const Card = styled.div`
+interface CardProps {
+  isSelected: boolean;
+}
+
+export const Card = styled.button<CardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: 0;
 
   background: ${props => props.theme.dark_bg};
   width: 195px;
@@ -356,6 +356,7 @@ export const Card = styled.div`
   border-radius: 4px;
 
   box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
+  transition: box-shadow 1s ease;
 
   > strong {
     font-size: 2.4rem;
@@ -372,6 +373,12 @@ export const Card = styled.div`
     color: ${props => props.theme.white_text_alt};
     margin-top: 14px;
   }
+
+  ${props =>
+    props.isSelected &&
+    css`
+      box-shadow: 0px 0px 6px 6px rgba(175, 87, 207, 0.8);
+    `};
 `;
 
 export const SectorCard = styled.div`

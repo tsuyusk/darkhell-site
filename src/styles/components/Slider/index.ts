@@ -11,6 +11,7 @@ export const SliderButtons = styled.div`
   top: 50%;
   transform: translateY(-50%);
 
+  pointer-events: none;
   display: flex;
   justify-content: space-between;
 
@@ -24,6 +25,7 @@ export const SliderButtons = styled.div`
     border: 1px solid ${props => props.theme.text};
     color: ${props => props.theme.text};
     background: ${props => props.theme.background};
+    pointer-events: visiblePainted;
   }
 `;
 

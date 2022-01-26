@@ -90,6 +90,7 @@ const Home: React.FC = () => {
       </S.Banner>
 
       <S.WhoWeAre ref={aboutUsRef}>
+        <h1 style={{ marginBottom: 26 }}>+55 62 9526-2840</h1>
         <h1>
           Sobre <span>nós</span>
         </h1>

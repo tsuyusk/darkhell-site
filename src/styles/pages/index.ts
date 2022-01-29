@@ -214,6 +214,7 @@ export const ImageTextSection = styled.article<ImageTextSectionProps>`
       > p {
         ${sectionText};
         margin-top: 51px;
+        white-space: pre-wrap;
       }
     }
   }
@@ -279,14 +280,21 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
           justify-content: space-between;
 
           > main {
-            > h1 {
-              ${sectionTitle};
-            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
 
-            > p {
-              width: 420px;
+            > div {
+              > h1 {
+                ${sectionTitle};
+              }
 
-              ${sectionText};
+              > p {
+                width: 420px;
+
+                ${sectionText};
+              }
             }
           }
 
@@ -398,6 +406,7 @@ export const SectorCard = styled.div`
   > h1 {
     font-family: ${props => props.theme.fonts.inter};
     font-size: 2.4rem;
+    margin-bottom: 12px;
 
     > span {
       color: ${props => props.theme.primary};
@@ -411,7 +420,7 @@ export const SectorCard = styled.div`
 
   > p {
     ${sectionText};
-    margin-top: 12px;
+    white-space: pre-wrap;
   }
 
   & + div {

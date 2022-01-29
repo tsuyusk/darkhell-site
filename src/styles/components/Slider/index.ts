@@ -35,6 +35,7 @@ interface ItemsProps {
 
 export const Items = styled.div<ItemsProps>`
   display: flex;
+  align-items: center;
   max-width: ${props => props.maxWidth || '1100px'};
 
   overflow: scroll;

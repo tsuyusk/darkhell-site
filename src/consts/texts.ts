@@ -55,3 +55,9 @@ export const RULES = [
   regra.
 `,
 ];
+
+export const ABOUT_US = `• Proposta: A Dark Hell é um grupo de pessoas fundado no dia 01 de novembro de 2020, que trabalha visando alcançar reconhecimento, influência e dinheiro, sendo isso através da criação e venda de sites a outras empresas, invasões de pentest, bug hunter, produção de vídeos no YouTube, e além disso temos treinamentos, que capacitam nossos membros para serem programadores, pentesters, editores, desenvolvedores web e etc.
+
+• Tematização: Os nossos canais de comunicação seguem uma tematização baseada no inferno da mitologia cristã, sendo uma pequena analogia sobre de onde as pessoas devem começar para alcançar os céus, que seria a representação do topo. Mas não significa que nos sejamos satanistas... eu acho..., nossas principais cores temam são roxo e preto, e também temos o nosso próprio símbolo representado no topo do site, que representa as asas angelicais decadentes 
+
+• Organização: Somos divididos em setores que são denominados como setor produtivo, (que tem capacidade de gerar dinheiro), ou, setor administrativo, (setor apenas de organização e planejamento), e seguimos um sistema de hierarquia feito com base na nossa tematização`;

@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import * as Icons from 'react-icons/fi';
 import { nanoid } from 'nanoid';
 
@@ -8,18 +8,30 @@ import { Content } from '@/components/Content';
 import { Slider } from '@/components/Slider';
 import { SEO } from '@/components/SEO';
 import * as S from '@/styles/pages/index';
-import { RULES } from '@/consts/texts';
-import { HIERARCHIES } from '@/consts/hierarchy';
+import { ABOUT_US, RULES } from '@/consts/texts';
+import { DEFAULT_HIERARCHY_TEXT, HIERARCHIES } from '@/consts/hierarchy';
+import { DEFAULT_SECTORS_TEXT, SECTORS } from '@/consts/sectors';
 
 const Home: React.FC = () => {
   const [selectedHierarchyIndex, setSelectedHierarchyIndex] = useState(-1);
-  // const [selectedSectorIndex, setSelectedSectorIndex] = useState(-1);
 
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);
   const vwUnityInPx = useMemo(() => {
     return window.innerWidth / 100;
   }, []);
+
+  const handleSelectHierarchy = useCallback(
+    (index: number) => {
+      if (selectedHierarchyIndex === index) {
+        setSelectedHierarchyIndex(-1);
+        return;
+      }
+
+      setSelectedHierarchyIndex(index);
+    },
+    [selectedHierarchyIndex],
+  );
 
   return (
     <S.Container>
@@ -103,31 +115,7 @@ const Home: React.FC = () => {
                 O que é a <span>Dark Hell</span> ?
               </h1>
 
-              <p>
-                • Dark Hell é uma empresa corporativa criada em novembro de
-                2020, com o objetivo de dominar as ramificações de
-                entretenimento digital e conteúdos gerais da internet, sendo
-                capaz de participar de diversos temas diferentes da internet, e
-                reunir diferentes tipos de pessoas e qualificações em apenas um
-                lugar.
-                <br />
-                <br />• Ela esta começando a se estabelecer no mundo digital há
-                cerca um ano, e tem demonstrado um crescimento muito bom em seus
-                vários projetos, e isso é demonstrado fortemente através da
-                criação rápida e de qualidade de seu site, ou através da
-                explosão de visualizações no canal do Youtube, batendo 50 mil de
-                visualizações no canal em menos de um mês.
-                <br />
-                <br />• Os meios de comunicação da Dark Hell são devidamente
-                tematizados com base no inferno da mitologia judaica, e temos
-                cores roxas e pretas como cores base, além do seu próprio
-                símbolo, que representa as asas angelicais que caem
-                <br />
-                <br />• Os membros desta corporação seguem um sistema de
-                hierarquia muito rigoroso e com seus participantes devidamente
-                selecionados de acordo com seus feitos e atividades dentro da
-                corporação.
-              </p>
+              <p>{ABOUT_US}</p>
             </div>
           </Content>
         </S.ImageTextSection>
@@ -138,25 +126,18 @@ const Home: React.FC = () => {
               <main>
                 <div>
                   <main>
-                    <h1>
-                      <span>Hierarquia</span>
-                    </h1>
-                    <br />
+                    <div>
+                      <h1>
+                        <span>Hierarquia</span>
+                      </h1>
+                      <br />
 
-                    <p>
-                      {selectedHierarchyIndex === -1 &&
-                        `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Facere nulla, a provident sed aspernatur fuga vero totam
-                        optio dignissimos quos! Corrupti debitis libero delectus
-                        modi voluptates unde, aperiam quae architecto! Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Eveniet,
-                        voluptas. Laborum nostrum qui molestias sint. Doloribus
-                        quo fugit deserunt. Optio eligendi quasi maxime voluptatum
-                        quod inventore laborum repellendus autem culpa!`}
-
-                      {selectedHierarchyIndex !== -1 &&
-                        HIERARCHIES[selectedHierarchyIndex].fullDesc}
-                    </p>
+                      <p>
+                        {selectedHierarchyIndex === -1
+                          ? DEFAULT_HIERARCHY_TEXT
+                          : HIERARCHIES[selectedHierarchyIndex].fullDesc}
+                      </p>
+                    </div>
                   </main>
 
                   <Slider
@@ -173,7 +154,7 @@ const Home: React.FC = () => {
                         <React.Fragment key={nanoid()}>
                           <S.Card
                             isSelected={selectedHierarchyIndex === index}
-                            onClick={() => setSelectedHierarchyIndex(index)}
+                            onClick={() => handleSelectHierarchy(index)}
                           >
                             <strong>{hierarchy.name}</strong>
                             <span>{hierarchy.label}</span>
@@ -198,19 +179,13 @@ const Home: React.FC = () => {
               <main>
                 <div>
                   <main>
-                    <h1>
-                      <span>Setores</span>
-                    </h1>
-                    <br />
-                    <p>
-                      A Dark Hell organiza suas operações em departamentos
-                      chamados setor. Cada setor se dedica à gestão e
-                      organização de temas específicos e tem divisões de equipes
-                      especializadas em diferentes areas. Os setores são
-                      administrados por um líder e co-lider eleito pelo Lord em
-                      conjunto com a Potestade. A Dark Hell está operando com os
-                      seguintes departamentos.
-                    </p>
+                    <div>
+                      <h1>
+                        <span>Setores</span>
+                      </h1>
+                      <br />
+                      <p>{DEFAULT_SECTORS_TEXT}</p>
+                    </div>
                   </main>
 
                   <Slider
@@ -226,61 +201,15 @@ const Home: React.FC = () => {
                         : { marginLeft: 32 }
                     }
                   >
-                    <S.SectorCard>
-                      <h1 aria-labelledby="Setor Hacker">
-                        sєтσя <span>нคcкεг</span>
-                      </h1>
+                    {SECTORS.map(sector => (
+                      <S.SectorCard>
+                        <h1 aria-labelledby={sector.ariaLabel}>
+                          {sector.name} <span>{sector.highlightedName}</span>
+                        </h1>
 
-                      <p>
-                        O setor hacker é o setor responsável por todas tarefas e
-                        atividades relacionadas a tecnologia, desde programação
-                        e desenvolvimento, até hacking e pentest, qualquer coisa
-                        relacionada a tecnologia fica encaminhado a esse setor.
-                        <br />
-                        <br />
-                        O setor hacker tem 2 subdivisões, sendo elas:
-                        <br />
-                        <br />
-                        - Dev
-                        <br />
-                        - Invasão
-                        <br />
-                        <br /> ♛ Líder: Imperador RIC
-                        <br /> ♚ Sub-Líder: CCA-469
-                      </p>
-                    </S.SectorCard>
-
-                    <S.SectorCard>
-                      <h1 aria-labelledby="Setor de Conteudo">
-                        Sєтσя ∂є <span>Cσηтєυ∂σ</span>
-                      </h1>
-
-                      <p>
-                        Setor de Conteúdo é o setor da Dark Hell responsável
-                        pelo visual, aparência, marketing e como o nome bem diz,
-                        o conteúdo dos seus meios de comunicação.
-                        <br />
-                        <br />
-                        Esse setor é palco de planejamento e produção de vídeos
-                        e imagens usados em todos os meios da Dark Hell e tem
-                        como subdivisões as seguintes categorias:
-                        <br />
-                        <br />
-                        - Edição
-                        <br />
-                        - Música
-                        <br />
-                        - Roteiro
-                        <br />
-                        - Publicidade
-                        <br />
-                        - Apresentação
-                        <br />
-                        <br />
-                        ♛ Líder: Louis
-                        <br />♚ Sub-Líder: Viic
-                      </p>
-                    </S.SectorCard>
+                        <p>{sector.fullDesc}</p>
+                      </S.SectorCard>
+                    ))}
                   </Slider>
                 </div>
               </main>
@@ -334,7 +263,9 @@ const Home: React.FC = () => {
                 </p>
               </S.WayOfenteringCard>
 
-              <S.WayOfenteringCard>
+              <S.WayOfenteringCard
+                onClick={() => window.open('https://discord.gg/QSNheHwEhE')}
+              >
                 <h1>Discord</h1>
                 <p>
                   Você deve entrar no Discord da Dark Hell e se candidatar para

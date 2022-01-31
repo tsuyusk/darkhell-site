@@ -264,7 +264,9 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
   width: 100%;
 
   > div {
+    width: 100%;
     > div {
+      width: 100%;
       > header {
         display: flex;
         width: 100%;

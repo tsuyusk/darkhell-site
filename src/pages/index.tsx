@@ -161,7 +161,7 @@ const Home: React.FC = () => {
                           </S.Card>
 
                           {index + 1 !== HIERARCHIES.length && (
-                            <Icons.FiChevronRight size={48} />
+                            <Icons.FiChevronLeft size={48} />
                           )}
                         </React.Fragment>
                       ))}

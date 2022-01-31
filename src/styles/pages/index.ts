@@ -481,6 +481,13 @@ export const TextLiListSection = styled.article`
 
         > li {
           ${sectionText};
+
+          padding: 16px 12px;
+          background: ${props => props.theme.dark_bg};
+          border-radius: 4px;
+          width: 90%;
+
+          box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
         }
       }
     }

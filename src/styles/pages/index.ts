@@ -292,6 +292,7 @@ export const ColumnDoubleTextContentSide = styled.article<ColumnDoubleTextConten
 
               > p {
                 width: 420px;
+                white-space: pre-wrap;
 
                 ${sectionText};
               }
@@ -387,13 +388,22 @@ export const Card = styled.button<CardProps>`
     css`
       box-shadow: 0px 0px 6px 6px rgba(175, 87, 207, 0.8);
     `};
+
+  & + button {
+    margin-left: 64px;
+  }
 `;
 
-export const SectorCard = styled.div`
+interface SectorCardProps {
+  isSelected: boolean;
+}
+
+export const SectorCard = styled.button<SectorCardProps>`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   padding: 42px 64px;
+  border: 0;
 
   color: ${props => props.theme.white_text};
   background: ${props => props.theme.dark_bg};
@@ -423,9 +433,15 @@ export const SectorCard = styled.div`
     white-space: pre-wrap;
   }
 
-  & + div {
+  & + button {
     margin-left: 72px;
   }
+
+  ${props =>
+    props.isSelected &&
+    css`
+      box-shadow: 0px 0px 6px 6px rgba(175, 87, 207, 0.8);
+    `};
 
   @media (max-width: 490px) {
     width: 74vw;
@@ -536,7 +552,7 @@ export const SingleTextColumnCardsRight = styled.article`
   }
 `;
 
-export const WayOfenteringCard = styled.button`
+export const WayOfenteringCard = styled.div`
   padding: 16px 12px;
   background: ${props => props.theme.dark_bg};
   border-radius: 4px;
@@ -567,7 +583,7 @@ export const WayOfenteringCard = styled.button`
     transform: translateY(-16px);
   }
 
-  & + button {
+  & + div {
     margin-top: 59px;
   }
 

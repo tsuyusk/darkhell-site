@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useRef, useState, useMemo } from 'react';
 import * as Icons from 'react-icons/fi';
 import { nanoid } from 'nanoid';
 
@@ -14,15 +14,28 @@ import { DEFAULT_SECTORS_TEXT, SECTORS } from '@/consts/sectors';
 
 const Home: React.FC = () => {
   const [selectedHierarchyIndex, setSelectedHierarchyIndex] = useState(-1);
+  const [selectedSectorIndex, setSelectedSectorIndex] = useState(-1);
 
   const bannerRef = useRef<HTMLElement>(null);
   const aboutUsRef = useRef<HTMLElement>(null);
-  const vwUnityInPx = useMemo(() => {
-    return window.innerWidth / 100;
-  }, []);
+
+  const vwUnityInPx = useMemo(() => window.innerWidth / 100, []);
+
+  const handleSelectSector = useCallback(
+    (index: number) => {
+      if (selectedSectorIndex === index) {
+        setSelectedSectorIndex(-1);
+        return;
+      }
+
+      setSelectedSectorIndex(index);
+    },
+    [selectedSectorIndex],
+  );
 
   const handleSelectHierarchy = useCallback(
     (index: number) => {
+      console.log(index);
       if (selectedHierarchyIndex === index) {
         setSelectedHierarchyIndex(-1);
         return;
@@ -184,7 +197,11 @@ const Home: React.FC = () => {
                         <span>Setores</span>
                       </h1>
                       <br />
-                      <p>{DEFAULT_SECTORS_TEXT}</p>
+                      <p>
+                        {selectedSectorIndex === -1
+                          ? DEFAULT_SECTORS_TEXT
+                          : SECTORS[selectedSectorIndex].fullDesc}
+                      </p>
                     </div>
                   </main>
 
@@ -201,14 +218,16 @@ const Home: React.FC = () => {
                         : { marginLeft: 32 }
                     }
                   >
-                    {SECTORS.map(sector => (
-                      <S.SectorCard key={nanoid()}>
+                    {SECTORS.map((sector, index) => (
+                      <S.Card
+                        isSelected={selectedSectorIndex === index}
+                        onClick={() => handleSelectSector(index)}
+                        key={nanoid()}
+                      >
                         <h1 aria-labelledby={sector.ariaLabel}>
                           {sector.name} <span>{sector.highlightedName}</span>
                         </h1>
-
-                        <p>{sector.fullDesc}</p>
-                      </S.SectorCard>
+                      </S.Card>
                     ))}
                   </Slider>
                 </div>

@@ -202,7 +202,7 @@ const Home: React.FC = () => {
                     }
                   >
                     {SECTORS.map(sector => (
-                      <S.SectorCard>
+                      <S.SectorCard key={nanoid()}>
                         <h1 aria-labelledby={sector.ariaLabel}>
                           {sector.name} <span>{sector.highlightedName}</span>
                         </h1>

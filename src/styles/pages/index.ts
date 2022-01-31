@@ -559,7 +559,7 @@ export const SingleTextColumnCardsRight = styled.article`
   }
 `;
 
-export const WayOfenteringCard = styled.div`
+export const WayOfenteringCard = styled.button`
   padding: 16px 12px;
   background: ${props => props.theme.dark_bg};
   border-radius: 4px;
@@ -586,11 +586,15 @@ export const WayOfenteringCard = styled.div`
     margin-top: 18px;
   }
 
-  &:hover {
+  &:first-child {
+    cursor: default;
+  }
+
+  &:not(:first-child):hover {
     transform: translateY(-16px);
   }
 
-  & + div {
+  & + button {
     margin-top: 59px;
   }
 

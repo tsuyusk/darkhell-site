@@ -38,6 +38,7 @@ export const TitleContainer = styled.div`
 
   > div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -63,6 +64,49 @@ export const TitleContainer = styled.div`
           background: ${props => props.theme.primary};
         }
       }
+    }
+  }
+`;
+
+interface ProductsViewSwitcherProps {
+  selectedOptionIndex: number;
+}
+
+export const ProductsViewSwitcher = styled.div<ProductsViewSwitcherProps>`
+  margin-top: 36px;
+
+  > button {
+    position: relative;
+    ${sectionText};
+    background: none;
+    border: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+
+      width: 100%;
+      height: 2px;
+      border-radius: 1px;
+
+      box-shadow: 0 0 4px rgba(122, 32, 154, 0.4);
+      background: ${props => props.theme.primary};
+
+      transform-origin: center;
+      transform: scaleX(0);
+      transition: transform 0.5s ease;
+    }
+
+    &:nth-child(${props => props.selectedOptionIndex + 1}) {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    & + button {
+      margin-left: 14px;
     }
   }
 `;
@@ -107,10 +151,16 @@ export const Item = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 320px;
+
+  background: ${props => props.theme.dark_bg};
+  box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
+  border: 0;
+  transition: 0.5s ease;
 
   > img {
     width: 300px;
-    height: 300px;
+    height: 320px;
     background: ${props => props.theme.gray_text};
     border-radius: 6px;
   }
@@ -120,8 +170,9 @@ export const Item = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-left: 32px;
-    height: 300px;
+    min-height: 300px;
     width: 100%;
+    padding: 12px 8px;
 
     > header {
       display: flex;
@@ -170,5 +221,90 @@ export const Item = styled.div`
         }
       }
     }
+  }
+`;
+
+export const CoursesList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  > div {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 8%;
+  }
+`;
+
+export const Card = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  border-radius: 4px;
+
+  background: ${props => props.theme.dark_bg};
+  box-shadow: 0px 0px 6px 6px rgba(122, 32, 154, 0.38);
+  border: 0;
+  transition: 0.5s ease;
+
+  text-align: left;
+
+  > img {
+    width: 100%;
+    height: 40%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  > header {
+    padding: 0 12px;
+
+    > h1 {
+      ${sectionText};
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  > main {
+    padding: 0 12px;
+    > p {
+      ${sectionText};
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 6px 6px rgba(175, 87, 207, 0.8);
+  }
+`;
+
+export const Data = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 16px 0;
+
+  > div {
+    background: ${props => props.theme.primary};
+    border-radius: 4px;
+    padding: 2px 6px;
+
+    > span {
+      ${sectionText};
+      color: ${props => props.theme.text_on_primary};
+    }
+  }
+
+  > span {
+    ${sectionText};
+    color: ${props => props.theme.green};
   }
 `;

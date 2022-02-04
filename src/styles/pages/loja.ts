@@ -130,6 +130,12 @@ export const Sector = styled.div`
     font-size: 2.8rem;
     margin-bottom: 40px;
   }
+
+  @media (max-width: 867px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const SellItems = styled.div`
@@ -172,7 +178,7 @@ export const Item = styled.div`
     margin-left: 32px;
     min-height: 300px;
     width: 100%;
-    padding: 12px 8px;
+    padding: 18px 8px;
 
     > header {
       display: flex;
@@ -222,6 +228,34 @@ export const Item = styled.div`
       }
     }
   }
+
+  @media (max-width: 867px) {
+    flex-direction: column;
+    height: fit-content;
+    max-width: 320px;
+
+    > img {
+      width: 100%;
+    }
+
+    > div {
+      > header {
+        flex-direction: column;
+
+        > h1 {
+          width: 80%;
+        }
+
+        > strong {
+          margin-top: 1.6rem;
+        }
+      }
+
+      > footer {
+        margin-top: 2.5rem;
+      }
+    }
+  }
 `;
 
 export const CoursesList = styled.div`
@@ -238,6 +272,14 @@ export const CoursesList = styled.div`
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, 300px);
     gap: 8%;
+  }
+
+  @media (max-width: 700px) {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;
 
@@ -282,6 +324,14 @@ export const Card = styled.button`
 
   &:hover {
     box-shadow: 0px 0px 6px 6px rgba(175, 87, 207, 0.8);
+  }
+
+  @media (max-width: 700px) {
+    max-width: 320px;
+
+    & + button {
+      margin-top: 70px;
+    }
   }
 `;
 

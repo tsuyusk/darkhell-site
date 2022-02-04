@@ -478,6 +478,7 @@ export const TextLiListSection = styled.article`
         grid-template-columns: repeat(3, 1fr);
         margin-top: 48px;
         gap: 32px;
+        list-style: none;
 
         width: 100%;
 
